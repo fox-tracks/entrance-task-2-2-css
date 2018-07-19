@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src: 'sha256-GBZpdGedoBaq6YBC2+5oO7Dc8WC1XJ5EUI5Md05Lls8='"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Яндекс Дом</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script>
+        // Picture element HTML5 shiv
+        document.createElement("picture");
+    </script>
+  </head>
+  <body class="page">
+      <div style="display:none">
+        <include src="build/img/sprite.svg"></include>
+      </div>
+    <header class="page__header header">
+      <h1 class="visually-hidden">Приложение Яндекс Дом</h1>
+      <div class="wrapper">
+        <a class="header__logo logo">
+          <picture>
+            <source>
+            <source>
+            <img class="logo__img" src="" alt="Логотип Яндекс Дом" height="27" width="108">
+          </picture>
+        </a>
+        <nav class="header__nav main-nav">
+          <h2 class="visually-hidden">Главное меню</h2>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link nav-link--active">Сводка</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="devices.html" class="main-nav__link nav-link">Устройства</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="scenarios.html" class="main-nav__link nav-link">Сценарии</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="page__dashboard dashboard">
+      <section class="dashboard__section dashboard__section--main main">
+        <h2 class="dashboard__section-title">Главное</h2>
+      </section>
+      <section class="dashboard__section dashboard__section--scenarios scenarios">
+        <h2 class="dashboard__section-title">Избранные сценарии</h2>
+        <ul class="scenarios__list">
+          <li class="scenarios__list-item">
+            <button class="scenarios__btn">Выключить весь свет в доме и во дворе</button>
+          </li>
+          <li class="scenarios__list-item">
+            <button class="scenarios__btn">Я ухожу</button>
+          </li>
+          <li class="scenarios__list-item">
+            <button class="scenarios__btn scenarios__btn--active">Включить свет в коридоре</button>
+          </li>
+          <li class="scenarios__list-item">
+            <button class="scenarios__btn">Набрать горячую ванну</button>
+          </li>
+          <li class="scenarios__list-item">
+            <button class="scenarios__btn">Сделать пол тёплым во всей квартире</button>
+          </li>
+        </ul>
+      </section>
+      <section class="dashboard__section dashboard__section--devices devices">
+          <h2 class="dashboard__section-title">Избранные устройства</h2>
+          <form action="#" metod="get" class="devices__filters filters">
+            <input type="radio" name="filters__item" class="filters__item">
+            <input type="radio" name="filters__item" class="filters__item">
+            <input type="radio" name="filters__item" class="filters__item">
+            <input type="radio" name="filters__item" class="filters__item">
+            <input type="radio" name="filters__item" class="filters__item">
+          </form>
+      </section>
+
+    </main>
+    <footer class="page__footer footer">
+        <div class="wrapper">
+          <nav class="footer__nav info-nav">
+            <h2 class="visually-hidden">Пользовательское меню</h2>
+            <ul class="info-nav__list">
+              <li class="info-nav__item">
+                <a href="help-page.html" class="info-nav__link nav-link">Помощь</a>
+              </li>
+              <li class="info-nav__item">
+                <a href="feedback-form.html" class="info-nav__link nav-link">Обратная связь</a>
+              </li>
+              <li class="info-nav__item">
+                  <a href="азк-developers.html" class="info-nav__link nav-link">Разработчикам</a>
+                </li>
+              <li class="info-nav__item">
+                <a href="conditions.html" class="info-nav__link nav-link"> Условия использования</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__copyright">© 2001–2017  ООО «Яндекс»</div>
+        </div>
+    </footer>
+  </body>
+  </html>
