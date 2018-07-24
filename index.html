@@ -42,38 +42,62 @@
       </div>
     </header>
     <main class="page__dashboard dashboard">
-      <section class="dashboard__section dashboard__section--main main">
+
+      <!-- сводка  -->
+      <section class="dashboard__section dashboard__section_subsection_main main">
         <h2 class="dashboard__section-title">Главное</h2>
       </section>
-      <section class="dashboard__section dashboard__section--scenarios scenarios">
+
+      <!-- сценарии -->
+      <section class="dashboard__section dashboard__section_subsection_scenarios scenarios">
         <h2 class="dashboard__section-title">Избранные сценарии</h2>
-        <ul class="scenarios__list">
-          <li class="scenarios__list-item">
-            <button class="scenarios__btn">Выключить весь свет в доме и во дворе</button>
-          </li>
-          <li class="scenarios__list-item">
-            <button class="scenarios__btn">Я ухожу</button>
-          </li>
-          <li class="scenarios__list-item">
-            <button class="scenarios__btn scenarios__btn--active">Включить свет в коридоре</button>
-          </li>
-          <li class="scenarios__list-item">
-            <button class="scenarios__btn">Набрать горячую ванну</button>
-          </li>
-          <li class="scenarios__list-item">
-            <button class="scenarios__btn">Сделать пол тёплым во всей квартире</button>
-          </li>
-        </ul>
+        <div class="scenarios__slider-btn-wrapper">
+           <!-- нужно ли scenarios__slider-btn ?  -->
+          <button class="scenarios__slider-btn slider-btn slider-btn_direction_left">Влево</button>
+          <button class="scenarios__slider-btn slider-btn slider-btn_direction_right">Вправо</button>
+        </div>
+        <div class="scenarios__wrapper scenarios__slider">
+          <!-- нужен ли active или они все active ? нужен ли scenarios__btn ? -->
+          <button class="scenarios__btn btn btn_scenario btn_type_light btn_state_active">Выключить весь свет в доме и во дворе</button>
+          <button class="scenarios__btn btn btn_scenario btn_type_time">Я ухожу</button>
+          <button class="scenarios__btn btn btn_scenario btn_type_light btn_state_active">Включить свет в коридоре</button>
+          <button class="scenarios__btn btn btn_scenario btn_type_heat btn_state_active">Набрать горячую ванну <span class="btn__state-text">Начнётся в <span class="btn__time-text">18:00</span></span></button>
+          <button class="scenarios__btn btn btn_scenario btn_type_heat btn_state_active">Сделать пол тёплым во всей квартире</button>
+        </div>
       </section>
-      <section class="dashboard__section dashboard__section--devices devices">
+
+      <!-- устройства -->
+      <section class="dashboard__section dashboard__section_subsection_devices devices">
           <h2 class="dashboard__section-title">Избранные устройства</h2>
+          <!-- переделать в меню - в мобильном выглядит как выпадашка -->
           <form action="#" metod="get" class="devices__filters filters">
-            <input type="radio" name="filters__item" class="filters__item">
-            <input type="radio" name="filters__item" class="filters__item">
-            <input type="radio" name="filters__item" class="filters__item">
-            <input type="radio" name="filters__item" class="filters__item">
-            <input type="radio" name="filters__item" class="filters__item">
+            <!-- нейминг - нужны ли элементы -->
+            <input type="radio" name="filters__item" value="all" id="filter_value_all" class="filters__item filter filter_state_active" checked>
+            <label for="filter_value_all" class="filter__label">Все</label>
+            <input type="radio" name="filters__item" value="kitchen" id="filter_value_kitchen" class="filters__item filter">
+            <label for="filter_value_kitchen" class="filter__label">Кухня</label>
+            <input type="radio" name="filters__item" value="room" id="filter_value_room"class="filters__item filter">
+            <label for="filter_value_room" class="filter__label">Зал</label>
+            <input type="radio" name="filters__item" value="lights" id="filter_value_lights" class="filters__item filter">
+            <label for="filter_value_lights" class="filter__label">Лампочки</label>
+            <input type="radio" name="filters__item" value="cameras" id="filter_value_cameras"class="filters__item filter">
+            <label for="filter_value_cameras" class="filter__label">Камеры</label>
           </form>
+          <div class="devices__slider-btn-wrapper">
+            <!-- нужно ли devices__slider-btn ?  -->
+            <button class="devices__slider-btn slider-btn slider-btn_direction_left">Влево</button>
+            <button class="devices__slider-btn slider-btn slider-btn_direction_right slider-btn_state_active">Вправо</button>
+          </div>
+          <div class="devices__wrapper devices__slider">
+            <!-- нужен ли класс devices__btn ?-->
+              <button class="device__btn btn btn_device btn_type_light btn_state_active">Xiaomi Yeelight LED Smart Bulb <span class="btn__state-text">Включено</span></button>
+              <button class="device__btn btn btn_device btn_type_light">D-Link Omna 180 Cam <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span></button>
+              <button class="device__btn btn btn_device btn_type_heat">Elgato Eve Degree Connected <span class="btn__state-text">Выключено до <span class="btn__time-text">17:00</span></span></button>
+              <button class="device__btn btn btn_device btn_type_light">LIFX Mini Day & Dusk A60 E27 <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span></button>
+              <button class="device__btn btn btn_device btn_type_light btn_state_active">Xiaomi Mi Air Purifier 2S <span class="btn__state-text">Включено</span></button>
+              <button class="device__btn btn btn_device btn_type_light">Philips Zhirui <span class="btn__state-text">Выключено</span></button>
+              <button class="device__btn btn btn_device btn_type_light btn_state_active">Xiaomi Mi Air Purifier 2S <span class="btn__state-text">Включено</span></button>
+          </div>
       </section>
 
     </main>
