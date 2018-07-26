@@ -191,6 +191,57 @@
         <div class="footer__copyright">© 2001–2017 ООО «Яндекс»</div>
       </div>
     </footer>
+    <section class="page__popup popup popup_type_heat">
+      <div class="popup__wrapper">
+        <form action="#" method="get" class="popup__content device">
+          <div class="device__panel">
+            <h2 class="device__name">Elgato Eve Degree Connected</h2>
+            <p class="device__state-text">Включено</p>
+            <p class="device__value">+23</p>
+            <!-- <p class="device__icon">Солнышко</p>  ???? или фоном-->
+            <div class="device__preset-wrapper presets">
+              <input type="radio" name="presets__item" value="manual" id="presets_value_manual" class="presets__item preset preset_value_manual" checked>
+              <label for="presets_valuse_manual" class="presets__label preset-label preset-label_value_manual">Все</label>
+              <input type="radio" name="presets__item" value="cold" id="presets_value_cold" class="presets__item preset preset_value_cold">
+              <label for="presets_value_cold" class="presets__label preset-label preset-label_value_cold">Холодно</label>
+              <input type="radio" name="presets__item" value="warm" id="presets_value_warm" class="presets__item preset preset_value_warm">
+              <label for="presets_value_warm" class="presets__label preset-label preset-label_value_warm">Тепло</label>
+              <input type="radio" name="presets__item" value="hot" id="presets_value_hot" class="presets__item preset preset_value_hot">
+              <label for="presets_value_hot" class="presets__label preset-label preset-label_value_hot">Жарко</label>
+            </div>
+            <div class="device__control-wrapper control">
+                <input type="range" min="-10" max="30" step="1" value="23">
+            </div>
+          </div>
+          <button class="popup__btn popup-btn popup-btn_type_submit" type="submit"></button>
+          <button class="popup__btn popup-btn popup-btn_type_close" type="button"></button>
+        </form>
+
+
+      </div>
+    </section>
+    <section class="page__popup popup popup_type_light">
+        <div class="popup__wrapper">
+          <form action="#" method="get"  class="popup__content device">
+            <h2 class="device__name">Xiaomi Yeelight LED Smart Bulb</h2>
+            <p class="device__state-text">Включится в <span class="device__time-text">17:00</span></p>
+            <p class="device__icon">Солнышко</p>
+            <div class="device__preset-wrapper presets">
+              <input type="radio" name="presets__item" value="manual" id="presets_value_manual" class="presets__item preset preset_value_manual" checked>
+              <label for="presets_valuse_manual" class="presets__label preset-label preset-label_value_manual">Все</label>
+              <input type="radio" name="presets__item" value="day-light" id="presets_value_day-light" class="presets__item preset preset_value_day-light">
+              <label for="presets_value_day-light" class="presets__label preset-label preset-label_value_day-light">Дневной свет</label>
+              <input type="radio" name="presets__item" value="evening-light" id="presets_value_evening-light" class="presets__item preset preset_value_evening-light">
+              <label for="presets_value_evening-light" class="presets__label preset-label preset-label_value_evening-light">Вечерний свет</label>
+              <input type="radio" name="presets__item" value="dawn" id="presets_value_dawn" class="presets__item preset preset_value_dawn">
+              <label for="presets_value_dawn" class="presets__label preset-label preset-label_value_dawn">Рассвет</label>
+            </div>
+            <div></div>
+          </form>
+
+
+        </div>
+      </section>
   </body>
 
 </html>
