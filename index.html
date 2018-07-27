@@ -24,7 +24,7 @@
           <picture>
             <source>
             <source>
-            <img class="logo__img" src="" alt="Логотип Яндекс Дом" height="27" width="108">
+            <img class="logo__img" src="img/content-images/logo.svg" alt="Логотип Яндекс Дом" width="112.884" height="38.04">
           </picture>
         </a>
         <div class="header__hamburger-btn hamburger-btn">
@@ -35,7 +35,7 @@
           <h2 class="visually-hidden">Главное меню</h2>
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="#" class="main-nav__link nav-link--active">Сводка</a>
+              <a href="#" class="main-nav__link nav-link nav-link--active">Сводка</a>
             </li>
             <li class="main-nav__item">
               <a href="devices.html" class="main-nav__link nav-link">Устройства</a>
@@ -56,10 +56,10 @@
 
           <!-- !!! дописать классы -->
 
-            <div>
-              <p>Привет, Геннадий!</p>
-              <p>Двери и окна закрыты, сигнализация включена.</p>
-              <table>
+            <div class="main__info-block">
+              <p class="main__greeting">Привет, <span class="main__username">Геннадий!</span></p>
+              <p class="main__info">Двери и окна закрыты, сигнализация включена.</p>
+              <table class="">
                 <tr>
                   <td>Дома</td>
                   <td>За окном</td>
@@ -209,8 +209,8 @@
               <input type="radio" name="presets__item" value="hot" id="presets_value_hot" class="presets__item preset preset_value_hot">
               <label for="presets_value_hot" class="presets__label preset-label preset-label_value_hot">Жарко</label>
             </div>
-            <div class="device__control-wrapper control control_type_heat">
-                <input type="range" min="-10" max="30" step="1" value="23">
+            <div class="device__control-wrapper">
+                <input type="range" min="-10" max="30" step="1" value="23" class="device__control control control_type_heat">
             </div>
           </div>
           <button class="popup__btn popup-btn popup-btn_type_apply" type="submit">Применить</button>
@@ -235,8 +235,8 @@
               <input type="radio" name="presets__item" value="dawn" id="presets_value_dawn" class="presets__item preset preset_value_dawn">
               <label for="presets_value_dawn" class="presets__label preset-label preset-label_value_dawn">Рассвет</label>
             </div>
-            <div class="device__control-wrapper control control_type_light">
-              <input type="range" min="1" max="52" step="1" value="35">
+            <div class="device__control-wrapper">
+              <input type="range" min="1" max="52" step="1" value="35" class="device__control control control_type_light">
             </div>
           </div>
           <button class="popup__btn popup-btn popup-btn_type_apply" type="submit">Применить</button>
@@ -252,8 +252,9 @@
             <p class="device__state-text">Включено</p>
             <p class="device__value">+23</p>
             <!-- <p class="device__icon">термометр</p>  ???? или фоном-->
-            <div class="device__control-wrapper control control_type_floor">
-              round knob
+            <div class="device__control-wrapper device__control-wrapper_type_floor">
+              <div class="device__control control control_type_floor"></div>
+              <div class="control__thumb"></div>
             </div>
           </div>
           <button class="popup__btn popup-btn popup-btn_type_apply" type="submit">Применить</button>

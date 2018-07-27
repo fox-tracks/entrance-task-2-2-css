@@ -1,0 +1,19 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+img {
+  height: auto;
+  display: block;
+}
+
+a {
+  color: @black;
+  text-decoration: none;
+}
