@@ -1,3 +1,11 @@
 .page {
-
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-weight: 400;
+  color: $black;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
 }
+

@@ -1,0 +1,13 @@
+.filters-menu {
+  @include no-list();
+  margin-left: 13px;
+  display: flex;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: bold;
+
+  &__item {
+    margin-right: 10px;
+  }
+
+}

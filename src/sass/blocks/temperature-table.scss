@@ -1,0 +1,23 @@
+.temperature-table {
+  &__headings {
+    color: $grey;
+  }
+
+  &__values {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: bold;
+  }
+
+  &__cell {
+    padding-right: 18px;
+  }
+
+  &__cell-with-icon {
+    width: 100px;
+  }
+
+  &__icon {
+    margin-left: 5px;
+  }
+}

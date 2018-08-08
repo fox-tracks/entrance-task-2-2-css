@@ -1,18 +1,43 @@
+// common
 @import "normalize.scss";
-@import "scaffolding.scss";
 @import "variables.scss";
 @import "mixins.scss";
-@import "fonts.scss";
+@import "scaffoldings.scss";
 @import "blocks/page.scss";
-@import "blocks/header.scss";
 @import "blocks/visually-hidden.scss";
+
+//header
+@import "blocks/header.scss";
 @import "blocks/logo.scss";
-
 @import "blocks/hamburger-btn.scss";
-
 @import "blocks/main-nav.scss";
-@import "blocks/nav-link.scss";
+
+//main
 @import "blocks/dashboard.scss";
 @import "blocks/main.scss";
+@import "blocks/temperature-table.scss";
+@import "blocks/slider.scss";
+@import "blocks/btn-slider-nav";
+@import "blocks/main-devices.scss";
+@import "blocks/btn.scss";
+@import "blocks/scripts.scss";
+@import "blocks/scenarios.scss";
+@import "blocks/equipment.scss";
+@import "blocks/btn-select.scss";
+@import "blocks/devices.scss";
+@import "blocks/filters-menu.scss";
+@import "blocks/filter-btn.scss";
+@import "blocks/scripts.scss";
+
+
+//footer
+@import "blocks/footer.scss";
+@import "blocks/info-nav.scss";
+
+//popup
+@import "blocks/popup.scss";
+@import "blocks/device.scss";
+@import "blocks/presets.scss";
+@import "blocks/control.scss";
 
 

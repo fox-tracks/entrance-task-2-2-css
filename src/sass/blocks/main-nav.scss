@@ -1,3 +1,23 @@
 .main-nav {
+  margin-left: 52px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  color: $grey;
+
+  &__list {
+    @include no-list();
+    display: flex;
+    align-content: center;
+  }
+
+  &__item {
+    margin-right: 28px;
+  }
+
+  &__link_state_active {
+    color: $black;
+  }
+
 
 }

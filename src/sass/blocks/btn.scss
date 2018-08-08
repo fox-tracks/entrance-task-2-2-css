@@ -1,0 +1,91 @@
+.btn {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 120px;
+  padding: 14px;
+  background-color: $btn-color;
+  border-radius: 20px;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: bold;
+  text-align: left;
+
+  &_scenario {
+    height: 100px;
+  }
+
+  &_device {
+    //min-width: 150px;
+    //max-width: 200px;
+    //width: 100%;
+    flex-shrink: 0;
+  }
+
+  &_device:last-child {
+    position: relative;
+  }
+
+  &_device:last-child::after {
+    display: block;
+    content: '';
+    width: 40px;
+    height: 120px;
+    position: absolute;
+    left: 100%;
+    top: 0;
+  }
+
+  &__state-text {
+    display: block;
+    font-size: $sub_text;
+    line-height: $sub_text_lh;
+    font-weight: normal;
+    color: $grey;
+  }
+
+  &__icon {
+    display: block;
+    margin-bottom: auto;
+    width: 24px;
+    height: 24px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &_type_light {
+      background-image: url("../img/icon_sun.svg");
+    }
+
+    &_type_light.btn__icon_state_active {
+      background-image: url("../img/icon_sun_2.svg");
+    }
+
+    &_type_heat {
+      background-image: url("../img/icon_temperature.svg");
+    }
+
+    &_type_heat.btn__icon_state_active {
+      background-image: url("../img/icon_temperature_2.svg");
+    }
+
+    &_type_time {
+      background-image: url("../img/icon_scheduled.svg");
+    }
+
+  }
+
+
+
+}
+
+@media (max-width: 965px) {
+  .btn {
+    &_device {
+      min-width: 150px;
+      max-width: 200px;
+      width: 100%;
+    }
+  }
+}
+

@@ -1,0 +1,29 @@
+.btn-slider-nav {
+  width: 16px;
+  height: 16px;
+
+  &_type_double-arrow {
+    background-image: url("../img/Icons/arrow-double.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &_type_single-arrow {
+    background-image: url("../img/Icons/arrow-left.svg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+  }
+
+  &_direction_right{
+    margin-left: 15px;
+    transform: scale(-1, 1);
+  }
+
+  &_state_active {
+    opacity: 1;
+  }
+
+}

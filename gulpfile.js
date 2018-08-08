@@ -20,7 +20,7 @@ var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
 
 gulp.task("style", function () {
-  gulp.src("src/sass/style.scss")
+  gulp.src("src/sass/styles.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
@@ -51,7 +51,7 @@ gulp.task("html", function () {
 
 gulp.task("scripts", function () {
   return gulp.src("src/js/own/**/*.js")
-    .pipe(concat("common.js"))
+    .pipe(concat("main.js"))
     .pipe(gulp.dest("dist/js"))
     .pipe(uglify())
     .pipe(rename("common.min.js"))
@@ -85,12 +85,11 @@ gulp.task("serve", function () {
 
 gulp.task("copy", function () {
   return gulp.src([
-      "src/fonts/**/*.{woff,woff2}",
-      "src/js/vendor/**/*.js",
-    ], {
-      base: "."
-    })
-    .pipe(gulp.dest("dist"));
+    "src/js/vendor/**/*.js",
+  ], {
+    base: "./src/js/vendor/"
+  })
+    .pipe(gulp.dest("dist/js"));
 });
 
 gulp.task("clean", function () {

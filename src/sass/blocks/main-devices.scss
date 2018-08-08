@@ -1,0 +1,9 @@
+.main-devices {
+  height: 310px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  &__item {
+    margin-bottom: 15px;
+  }
+}

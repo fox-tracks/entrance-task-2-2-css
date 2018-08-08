@@ -3,7 +3,6 @@
 
   <head>
     <meta charset="utf-8">
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src: 'sha256-GBZpdGedoBaq6YBC2+5oO7Dc8WC1XJ5EUI5Md05Lls8='"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Яндекс Дом</title>
     <link rel="stylesheet" href="css/style.min.css">
@@ -19,7 +18,7 @@
     </div>
     <header class="page__header header">
       <h1 class="visually-hidden">Приложение Яндекс Дом</h1>
-      <div class="page__wrapper">
+      <div class="header__wrapper">
         <a class="header__logo logo">
           <picture>
             <source>
@@ -32,92 +31,112 @@
           <label for="hamburger-btn__toggle" class="hamburger-btn__label">Кнопка меню</label>
         </div>
         <nav class="header__nav main-nav">
-          <h2 class="visually-hidden">Главное меню</h2>
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="#" class="main-nav__link nav-link nav-link--active">Сводка</a>
+              <a href="#" class="main-nav__link main-nav__link_state_active">Сводка</a>
             </li>
             <li class="main-nav__item">
-              <a href="devices.html" class="main-nav__link nav-link">Устройства</a>
+              <a href="#" class="main-nav__link">Устройства</a>
             </li>
             <li class="main-nav__item">
-              <a href="scripts.html" class="main-nav__link nav-link">Сценарии</a>
+              <a href="#" class="main-nav__link">Сценарии</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="page__dashboard dashboard">
-      <div class="page__wrapper">
+      <div class="dashboard__wrapper">
+
         <!-- сводка  -->
+
         <section class="dashboard__section dashboard__section_subsection_main main">
           <h2 class="dashboard__section-title">Главное</h2>
           <div class="main__wrapper">
-
-          <!-- !!! дописать классы -->
-
             <div class="main__info-block">
               <p class="main__greeting">Привет, <span class="main__username">Геннадий!</span></p>
-              <p class="main__info">Двери и окна закрыты, сигнализация включена.</p>
-              <table class="">
-                <tr>
+              <p class="main__info">Двери и окна закрыты, сигнализация&nbsp;включена.</p>
+              <table class="main__temperature-table temperature-table">
+                <tr class="temperature-table__headings">
                   <td>Дома</td>
                   <td>За окном</td>
                 </tr>
-                <tr>
-                    <td>+23</td>
-                    <td>+19<span><img class="rainfall" src="" alt="Осадки" height="26" width="26"></span></td>
-                  </tr>
+                <tr class="temperature-table__values">
+                  <td class="temperature-table__cell">+23</td>
+                  <td class="temperature-table__cell-with-icon">+19<span><img class="temperature-table__icon" src="img/cloud-drizzle.svg" alt="Осадки" height="26" width="26"></span></td>
+                </tr>
               </table>
             </div>
-
-            <!-- пределать модификатор на слайдер -->
-
             <div class="main__slider slider slider_main">
-              <button class="slider__nav-btn slider__nav-btn_main slider-nav-btn slider-nav-btn_type_double-arrow slider-nav-btn_direction_top">Вверх</button>
+              <button class="slider__nav-btn slider__nav-btn_main btn-slider-nav btn-slider-nav_type_double-arrow btn-slider-nav_direction_top"></button>
               <div class="slider__content-wrapper main-devices">
-                <button class="main-devices__item btn btn_device btn_type_heat">Philips Cooler
+                <button class="main-devices__item btn btn_device">
+                  <span class="btn__icon btn__icon_type_heat"></span>
+                  <span class="btn__main-text">Philips Cooler</span>
                   <span class="btn__state-text">Начнет охлаждать в <span class="btn__time-text">16:30</span></span>
                 </button>
-                <button class="main-devices__item btn btn_device btn_type_light">Xiaomi Yeelight LED Smart Bulb
+                <button class="main-devices__item btn btn_device">
+                  <span class="btn__icon btn__icon_type_light"></span>
+                  <span class="btn__main-text">Xiaomi Yeelight LED Smart Bulb</span>
                   <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span>
                 </button>
-                <button class="main-devices__item btn btn_device btn_type_light btn_state_active">LIFX Mini Day & Dusk A60 E27
+                <button class="main-devices__item btn btn_device btn_type_light btn_state_active">
+                  <span class="btn__icon btn__icon_type_light"></span>
+                  <span class="btn__main-text">LIFX Mini Day & Dusk A60 E27</span>
                   <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span>
                 </button>
               </div>
             </div>
           </div>
         </section>
+
         <!-- сценарии -->
+
         <section class="dashboard__section dashboard__section_subsection_scripts scripts">
           <h2 class="dashboard__section-title">Избранные сценарии</h2>
           <div class="scripts__slider slider">
             <div class="slider__nav-btn-wrapper">
               <!-- нужно ли scripts__slider-btn ?  -->
-              <button class="slider__nav-btn slider-nav-btn slider-nav-btn_direction_left">Влево</button>
-              <button class="slider__nav-btn slider-nav-btn slider-nav-btn_direction_right">Вправо</button>
+              <button class="slider__nav-btn btn-slider-nav btn-slider-nav_type_single-arrow"></button>
+              <button class="slider__nav-btn btn-slider-nav btn-slider-nav_type_single-arrow btn-slider-nav_direction_right"></button>
             </div>
             <div class="slider__content-wrapper scenarios">
-              <button class="scenarios__item btn btn_scenario btn_type_light btn_state_active">Выключить весь свет в доме и во дворе</button>
-              <button class="scenarios__item btn btn_scenario btn_type_time">Я ухожу</button>
-              <button class="scenarios__item btn btn_scenario btn_type_light btn_state_active">Включить свет в коридоре</button>
-              <button class="scenarios__item btn btn_scenario btn_type_heat btn_state_active">Набрать горячую ванну
+              <button class="scenarios__item btn btn_scenario">
+                <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
+                <span class="btn__main-text">Выключить весь свет в доме и во дворе</span>
+              </button>
+              <button class="scenarios__item btn btn_scenario">
+                <span class="btn__icon btn__icon_type_time"></span>
+                <span class="btn__main-text">Я ухожу</span>
+              </button>
+              <button class="scenarios__item btn btn_scenario">
+                <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
+                <span class="btn__main-text">Включить свет в коридоре</span>
+              </button>
+              <button class="scenarios__item btn btn_scenario">
+                <span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>
+                <span class="btn__main-text">Набрать горячую ванну</span>
                 <span class="btn__state-text">Начнётся в <span class="btn__time-text">18:00</span></span>
               </button>
-              <button class="scenarios__item btn btn_scenario btn_type_heat btn_state_active">Сделать пол тёплым во всей квартире</button>
+              <button class="scenarios__item btn btn_scenario btn_state_active">
+                <span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>
+                <span class="btn__main-text">Сделать пол тёплым во всей квартире</span>
+              </button>
             </div>
           </div>
         </section>
       </div>
+
       <!-- устройства -->
+
       <section class="dashboard__section dashboard__section_subsection_equipment equipment">
-        <div class="page__wrapper">
+        <div class="equipment__wrapper">
           <h2 class="dashboard__section-title">Избранные устройства</h2>
           <div class="equipment__menu-wrapper">
-            <div class="equipment__menu-arrow-btn arrow-btn">
-              <input type="checkbox" name="arrow-btn__toggle" id="arrow-btn__toggle" class="arrow-btn__toggle">
-              <label for="arrow-btn__toggle" class="arrow-btn__label">Кнопка меню</label>
+            <div class="equipment__menu-btn-select btn-select">
+              // переделать на button
+              <input type="checkbox" name="btn-select__toggle" id="btn-select__toggle" class="btn-select__toggle">
+              <label for="btn-select__toggle" class="btn-select__label">Кнопка меню</label>
             </div>
             <ul class="equipment__filters-menu filters-menu">
               <li class="filters-menu__item">
@@ -140,107 +159,135 @@
         </div>
         <div class="equipment__slider slider">
           <div class="slider__nav-btn-wrapper slider__nav-btn-wrapper_subsection_equipment">
-            <button class="slider__nav-btn slider-nav-btn slider-nav-btn_direction_left">Влево</button>
-            <button class="slider__nav-btn slider-nav-btn slider-nav-btn_direction_right slider-nav-btn_state_active">Вправо</button>
+            <button class="slider__nav-btn btn-slider-nav btn-slider-nav_type_single-arrow"></button>
+            <button class="slider__nav-btn btn-slider-nav btn-slider-nav_type_single-arrow btn-slider-nav_direction_right btn-slider-nav_state_active"></button>
           </div>
           <div class="slider__content-wrapper devices">
-            <button class="devices__item btn btn_device btn_type_light btn_state_active">Xiaomi Yeelight LED Smart Bulb
+            <button class="devices__item btn btn_device">
+              <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
+              <span class="btn__main-text">Xiaomi Yeelight LED Smart Bulb</span>
               <span class="btn__state-text">Включено</span>
             </button>
-            <button class="devices__item btn btn_device btn_type_light">D-Link Omna 180 Cam
+            <button class="devices__item btn btn_device">
+              <span class="btn__icon btn__icon_type_light"></span>
+              <span class="btn__main-text">Xiaomi Yeelight LED Smart Bulb</span>
               <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span>
             </button>
-            <button class="devices__item btn btn_device btn_type_heat">Elgato Eve Degree Connected
+            <button class="devices__item btn btn_device">
+              <span class="btn__icon btn__icon_type_heat"></span>
+              <span class="btn__main-text">Elgato Eve Degree Connected</span>
               <span class="btn__state-text">Выключено до<span class="btn__time-text">17:00</span></span>
             </button>
-            <button class="devices__item btn btn_device btn_type_light">LIFX Mini Day & Dusk A60 E27
+            <button class="devices__item btn btn_device">
+              <span class="btn__icon btn__icon_type_light"></span>
+              <span class="btn__main-text">LIFX Mini Day & Dusk A60 E27</span>
               <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span>
             </button>
-            <button class="devices__item btn btn_device btn_type_light btn_state_active">Xiaomi Mi Air Purifier 2S
+            <button class="devices__item btn btn_device">
+              <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
+              <span class="btn__main-text">Xiaomi Mi Air Purifier 2S</span>
               <span class="btn__state-text">Включено</span>
             </button>
-            <button class="devices__item btn btn_device btn_type_light">Philips Zhirui
+            <button class="devices__item btn btn_device">
+              <span class="btn__icon btn__icon_type_light"></span>
+              <span class="btn__main-text">Philips Zhirui</span>
               <span class="btn__state-text">Выключено</span>
             </button>
-            <button class="devices__item btn btn_device btn_type_light btn_state_active">Xiaomi Mi Air Purifier 2S
+            <button class="devices__item btn btn_device">
+              <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
+              <span class="btn__main-text">Xiaomi Mi Air Purifier 2S</span>
+
+
               <span class="btn__state-text">Включено</span>
             </button>
           </div>
         </div>
       </section>
     </main>
+
+    <!--футер -->
+
     <footer class="page__footer footer">
-      <div class="page__wrapper">
+      <div class="footer__wrapper">
         <nav class="footer__nav info-nav">
           <h2 class="visually-hidden">Пользовательское меню</h2>
           <ul class="info-nav__list">
             <li class="info-nav__item">
-              <a href="help-page.html" class="info-nav__link nav-link">Помощь</a>
+              <a href="#" class="info-nav__link">Помощь</a>
             </li>
             <li class="info-nav__item">
-              <a href="feedback-form.html" class="info-nav__link nav-link">Обратная связь</a>
+              <a href="#" class="info-nav__link">Обратная связь</a>
             </li>
             <li class="info-nav__item">
-              <a href="азк-developers.html" class="info-nav__link nav-link">Разработчикам</a>
+              <a href="#" class="info-nav__link">Разработчикам</a>
             </li>
             <li class="info-nav__item">
-              <a href="conditions.html" class="info-nav__link nav-link"> Условия использования</a>
+              <a href="#" class="info-nav__link">Условия использования</a>
             </li>
           </ul>
         </nav>
         <div class="footer__copyright">© 2001–2017 ООО «Яндекс»</div>
       </div>
     </footer>
+
+    <!-- попапы -->
+
     <section class="page__popup popup popup_type_heat">
       <div class="popup__wrapper">
         <form action="#" method="get" class="popup__content device">
-          <div class="device__panel">
+          <div class="popup__device-wrapper device__wrapper device__wrapper_type_heat">
             <h2 class="device__name">Elgato Eve Degree Connected</h2>
             <p class="device__state-text">Включено</p>
             <p class="device__value">+23</p>
-            <!-- <p class="device__icon">термометр</p>  ???? или фоном-->
             <div class="device__preset-wrapper presets">
-              <input type="radio" name="presets__item" value="manual" id="presets_value_manual" class="presets__item preset preset_value_manual" checked>
-              <label for="presets_valuse_manual" class="presets__label preset-label preset-label_value_manual">Все</label>
-              <input type="radio" name="presets__item" value="cold" id="presets_value_cold" class="presets__item preset preset_value_cold">
-              <label for="presets_value_cold" class="presets__label preset-label preset-label_value_cold">Холодно</label>
-              <input type="radio" name="presets__item" value="warm" id="presets_value_warm" class="presets__item preset preset_value_warm">
-              <label for="presets_value_warm" class="presets__label preset-label preset-label_value_warm">Тепло</label>
-              <input type="radio" name="presets__item" value="hot" id="presets_value_hot" class="presets__item preset preset_value_hot">
-              <label for="presets_value_hot" class="presets__label preset-label preset-label_value_hot">Жарко</label>
+              <input type="radio" name="presets__item" value="manual" id="presets_value_by_hand" class="presets__item" checked>
+              <label for="presets_value_by_hand" class="presets__label">Все</label>
+              <input type="radio" name="presets__item" value="cold" id="presets_value_cold" class="presets__item">
+              <label for="presets_value_cold" class="presets__label">Холодно</label>
+              <input type="radio" name="presets__item" value="warm" id="presets_value_warm" class="presets__item">
+              <label for="presets_value_warm" class="presets__label">Тепло</label>
+              <input type="radio" name="presets__item" value="hot" id="presets_value_hot" class="presets__item">
+              <label for="presets_value_hot" class="presets__label">Жарко</label>
             </div>
             <div class="device__control-wrapper">
-                <input type="range" min="-10" max="30" step="1" value="23" class="device__control control control_type_heat">
+              <input type="range" min="-10" max="30" step="1" value="16" id="control_type_heat" class="device__control control control_type_heat">
+              <label for="control_type_heat" class="control__label control__label_min">-10</label>
+              <label for="control_type_heat" class="control__label control__label_max">+30</label>
             </div>
           </div>
-          <button class="popup__btn popup-btn popup-btn_type_apply" type="submit">Применить</button>
-          <button class="popup__btn popup-btn popup-btn_type_close" type="button">Закрыть</button>
+          <button class="popup__btn popup__btn_type_apply" type="submit">Применить</button>
+          <button class="popup__btn" type="button">Закрыть</button>
         </form>
       </div>
     </section>
     <section class="page__popup popup popup_type_light">
       <div class="popup__wrapper">
         <form action="#" method="get"  class="popup__content device">
-          <div class="device__panel">
+          <div class="popup__device-wrapper device__wrapper device__wrapper_type_light">
             <h2 class="device__name">Xiaomi Yeelight LED Smart Bulb</h2>
             <p class="device__state-text">Включится в <span class="device__time-text">17:00</span></p>
-            <p class="device__icon">Солнышко</p>
             <div class="device__preset-wrapper presets">
-              <input type="radio" name="presets__item" value="manual" id="presets_value_manual" class="presets__item preset preset_value_manual" checked>
-              <label for="presets_valuse_manual" class="presets__label preset-label preset-label_value_manual">Все</label>
-              <input type="radio" name="presets__item" value="day-light" id="presets_value_day-light" class="presets__item preset preset_value_day-light">
-              <label for="presets_value_day-light" class="presets__label preset-label preset-label_value_day-light">Дневной свет</label>
-              <input type="radio" name="presets__item" value="evening-light" id="presets_value_evening-light" class="presets__item preset preset_value_evening-light">
-              <label for="presets_value_evening-light" class="presets__label preset-label preset-label_value_evening-light">Вечерний свет</label>
-              <input type="radio" name="presets__item" value="dawn" id="presets_value_dawn" class="presets__item preset preset_value_dawn">
-              <label for="presets_value_dawn" class="presets__label preset-label preset-label_value_dawn">Рассвет</label>
+              <input type="radio" name="presets__item" value="manual" id="presets_value_manual" class="presets__item" checked>
+              <label for="presets_value_manual" class="presets__label">Все</label>
+              <input type="radio" name="presets__item" value="day-light" id="presets_value_day-light" class="presets__item">
+              <label for="presets_value_day-light" class="presets__label">Дневной свет</label>
+              <input type="radio" name="presets__item" value="evening-light" id="presets_value_evening-light" class="presets__item">
+              <label for="presets_value_evening-light" class="presets__label">Вечерний свет</label>
+              <input type="radio" name="presets__item" value="dawn" id="presets_value_dawn" class="presets__item ">
+              <label for="presets_value_dawn" class="presets__label">Рассвет</label>
             </div>
             <div class="device__control-wrapper">
               <input type="range" min="1" max="52" step="1" value="35" class="device__control control control_type_light">
             </div>
+
+            <!--<div class="device__control-wrapper">-->
+              <!--<input type="range" min="1" max="52" step="1" value="35" id="control_type_light" class="device__control control control_type_light">-->
+              <!--<label for="control_type_light" class="control__label control__label_min">-10</label>-->
+              <!--<label for="control_type_light" class="control__label control__label_max">+30</label>-->
+            <!--</div>-->
           </div>
-          <button class="popup__btn popup-btn popup-btn_type_apply" type="submit">Применить</button>
-          <button class="popup__btn popup-btn popup-btn_type_close" type="button">Закрыть</button>
+          <button class="popup__btn popup__btn_type_apply" type="submit">Применить</button>
+          <button class="popup__btn" type="button">Закрыть</button>
         </form>
       </div>
     </section>
@@ -257,8 +304,8 @@
               <div class="control__thumb"></div>
             </div>
           </div>
-          <button class="popup__btn popup-btn popup-btn_type_apply" type="submit">Применить</button>
-          <button class="popup__btn popup-btn popup-btn_type_close" type="button">Закрыть</button>
+          <button class="popup__btn popup__btn_type_apply" type="submit">Применить</button>
+          <button class="popup__btn" type="button">Закрыть</button>
         </form>
       </div>
     </section>

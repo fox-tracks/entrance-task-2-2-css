@@ -1,0 +1,16 @@
+.equipment {
+  &__wrapper {
+    @include wrapper();
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1367px) {
+  .equipment {
+    &__slider {
+      margin: 0 auto;
+    }
+  }
+}

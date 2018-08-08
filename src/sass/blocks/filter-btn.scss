@@ -1,0 +1,10 @@
+.filter-btn {
+  font: inherit;
+  background-color: $btn-color;
+  border-radius: 20px;
+  padding: 8px 15px;
+
+  &_state_active {
+    background-color: #FFD93E;
+  }
+}

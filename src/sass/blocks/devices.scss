@@ -1,0 +1,20 @@
+.devices {
+  height: 120px;
+  max-width: 1366px;
+  margin-left: 3%;
+  padding-right: 3%;
+  overflow-x: scroll;
+  display: flex;
+  justify-content: left;
+
+  &__item {
+    margin-right: 15px;
+  }
+}
+
+//@media (min-width: 1367px) {
+//  .devices {
+//    margin: 0 auto;
+//    padding-left: 40px;
+//  }
+//}

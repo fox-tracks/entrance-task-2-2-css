@@ -1,0 +1,39 @@
+.slider {
+  position: relative;
+
+  &_main {
+    min-width: 150px;
+    max-width: 200px;
+    width: 100%;
+  }
+
+  &__nav-btn_main {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  &__nav-btn-wrapper {
+    position: absolute;
+    bottom: calc(100% + 20px);
+    right: 0;
+
+    &_subsection_equipment {
+      right: 3%;
+    }
+  }
+}
+
+@media (min-width: 1367px) {
+  .slider {
+    max-width: 1366px;
+
+    &_main {
+      max-width: 200px;
+    }
+  }
+
+}
+

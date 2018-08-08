@@ -1,0 +1,94 @@
+.device {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 25px;
+    background-color: #FFF;
+    background-image: url("../img/icon_temperature_2.svg");
+    background-repeat: no-repeat;
+    background-position: top 25px right 25px;
+    background-size: 40px 40px;
+    border-radius: 20px;
+    font-weight: bold;
+    position: relative;
+
+    &_type_heat {
+      background-image: url("../img/icon_temperature_2.svg");
+    }
+
+    &_type_light {
+      background-image: url("../img/icon_sun.svg");
+    }
+  }
+
+  &__name {
+    margin: 0 0 6px;
+    font-size: 27px;
+    line-height: 31px;
+  }
+
+  &__state-text {
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  &__value {
+    @include indent(0, 0);
+    font-size: 36px;
+    line-height: 42px;
+    position: absolute;
+    top: 25px;
+    right: 68px;
+    z-index: 3;
+  }
+
+  &__preset-wrapper {
+    margin-bottom: 25px;
+    overflow-x: scroll;
+  }
+
+  &__control-wrapper {
+    width: 100%;
+    height: 60px;
+    position: relative;
+  }
+}
+
+@media (max-width: 680px) {
+  .device {
+    &__wrapper {
+      margin-bottom: 15px;
+      height: 492px;
+      padding: 20px 0 20px 20px;
+      background-image: none;
+    }
+
+    &__name {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    &__state-text {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    &__control-wrapper {
+      font-size: 0;
+      width: 336px;
+      transform: rotate(-90deg) translate(-137px, -20px);
+    }
+    &__control {
+
+    }
+
+    &__value {
+      display: none;
+    }
+
+  }
+}

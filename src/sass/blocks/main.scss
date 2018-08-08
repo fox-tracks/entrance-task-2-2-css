@@ -1,3 +1,32 @@
 .main {
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    height: 330px;
+    padding: 20px 20px 0 25px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: url("../img/bg@1x.png") no-repeat;
+    background-size: cover;
+  }
 
+  &__info-block {
+    margin-right: auto;
+    padding-right: 20px;
+  }
+
+  &__greeting {
+    @include indent(0, 0);
+    font-size: 27px;
+    line-height: 31px;
+    font-weight: bold ;
+  }
+
+  &__info {
+    margin: 6px 0 25px;
+  }
+
+  &_blur {
+    filter: blur(6px);
+  }
 }
