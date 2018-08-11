@@ -22,7 +22,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-svgstore": "^6.1.0",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify-es": "^1.0.4",
     "gulp-webp": "^2.3.0",
     "posthtml-include": "^1.1.0",
     "run-sequence": "^2.2.1",

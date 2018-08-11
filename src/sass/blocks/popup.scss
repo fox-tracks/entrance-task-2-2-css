@@ -1,20 +1,27 @@
 .popup {
   // display: none;
   position: fixed;
+  top: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(51,51,51,0.5);
   z-index: 2;
 
+  &_show {
+    display: block;
+  }
 
+  &_type_heat {
+    display: none;
+  }
 
   &_type_light {
     display: none;
   }
 
-  &_type_floor {
-    display: none;
-  }
+  //&_type_floor {
+  //  display: none;
+  //}
 
   &__wrapper {
     // не нужен

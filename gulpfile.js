@@ -17,7 +17,7 @@ var server = require("browser-sync").create();
 var run = require("run-sequence");
 var del = require("del");
 var concat = require("gulp-concat");
-var uglify = require("gulp-uglify");
+var uglify = require('gulp-uglify-es').default;
 
 gulp.task("style", function () {
   gulp.src("src/sass/styles.scss")
@@ -79,6 +79,7 @@ gulp.task("serve", function () {
     server: "dist/"
   });
   gulp.watch("src/sass/**/*.scss", ["style"]);
+  gulp.watch("src/js/**/*.js", ["scripts"]);
   gulp.watch("*.html", ["html"]);
 });
 

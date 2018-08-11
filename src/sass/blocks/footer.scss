@@ -1,6 +1,6 @@
 .footer {
   margin-top: auto;
-  padding: 22px 0 27px;
+  height: 64px;
   font-size: $sub_text;
   line-height: $sub_text_lh;
   letter-spacing: 0.01px;
@@ -8,12 +8,32 @@
 
   &__wrapper {
     @include wrapper();
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  &_blur {
-    filter: blur(6px);
+  &__copyright {
+    white-space: nowrap;
   }
 }
+
+@media (max-width: 670px) {
+  .footer {
+    &__wrapper {
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 5px 0;
+    }
+  }
+}
+
+
+@media (max-width: 440px) {
+  .footer {
+    font-size: 11px;
+
+  }
+}
+

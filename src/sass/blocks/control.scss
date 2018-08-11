@@ -28,6 +28,44 @@
                 linear-gradient(85deg, #FFE682 2%, #FF9E00 98%);
   }
 
+  &_type_floor {
+    height: 100%;
+    width: 100%;
+    transform: rotate(-242deg);
+    border-radius: 50%;
+  }
+
+  &__grade {
+    stroke-width: 44px;
+    stroke-dasharray: 500 697;
+    height: 222px;
+    width: 222px;
+  }
+
+  &__thumb {
+    width: 12px;
+    height: 8px;
+    position: absolute;
+    top: calc(50% - 4px);
+    left: calc(50% - 6px);
+    background: url("../img/Icons/icon_arrow.svg") no-repeat center;
+    transform: rotate(105deg) translateY(-87px);
+  }
+
+  &__value {
+    margin: 0;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    font-size: 66px;
+    line-height: 178px;
+    text-align: center;
+    box-shadow: 0 2px 4px 0 rgba(134,121,71,0.45);
+    position: absolute;
+    top: 21px;
+    left: 20px;
+  }
+
   &__label {
     font-size: 18px;
     line-height: 60px;

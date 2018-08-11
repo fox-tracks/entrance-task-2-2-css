@@ -13,224 +13,224 @@
   </head>
 
   <body class="page">
-    <div style="display:none">
-      <include src="build/img/sprite.svg"></include>
-    </div>
-    <header class="page__header header">
-      <h1 class="visually-hidden">Приложение Яндекс Дом</h1>
-      <div class="header__wrapper">
-        <a class="header__logo logo">
-          <picture>
-            <source>
-            <source>
-            <img class="logo__img" src="img/content-images/logo.svg" alt="Логотип Яндекс Дом" width="112.884" height="38.04">
-          </picture>
-        </a>
-        <div class="header__hamburger-btn hamburger-btn">
-          <input type="checkbox" name="hamburger-btn__toggle" id="hamburger-btn__toggle" class="hamburger-btn__toggle">
-          <label for="hamburger-btn__toggle" class="hamburger-btn__label">Кнопка меню</label>
-        </div>
-        <nav class="header__nav main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="#" class="main-nav__link main-nav__link_state_active">Сводка</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#" class="main-nav__link">Устройства</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#" class="main-nav__link">Сценарии</a>
-            </li>
-          </ul>
-        </nav>
+    <div class="page__wrapper">
+      <div style="display:none">
+        <include src="build/img/sprite.svg"></include>
       </div>
-    </header>
-    <main class="page__dashboard dashboard">
-      <div class="dashboard__wrapper">
+      <header class="page__header header">
+        <h1 class="visually-hidden">Приложение Яндекс Дом</h1>
+        <div class="header__wrapper">
+          <a class="header__logo logo">
+            <picture>
+              <source>
+              <source>
+              <img class="logo__img" src="img/content-images/logo.svg" alt="Логотип Яндекс Дом" width="112.884" height="38.04">
+            </picture>
+          </a>
+          <button class="header__hamburger-btn hamburger-btn">
+            <span class="hamburger-btn__bar"></span>
+          </button>
+          <nav class="header__nav main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link main-nav__link_state_active">Сводка</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Устройства</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Сценарии</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="page__dashboard dashboard">
+        <div class="dashboard__wrapper">
 
-        <!-- сводка  -->
+          <!-- сводка  -->
 
-        <section class="dashboard__section dashboard__section_subsection_main main">
-          <h2 class="dashboard__section-title">Главное</h2>
-          <div class="main__wrapper">
-            <div class="main__info-block">
-              <p class="main__greeting">Привет, <span class="main__username">Геннадий!</span></p>
-              <p class="main__info">Двери и окна закрыты, сигнализация&nbsp;включена.</p>
-              <table class="main__temperature-table temperature-table">
-                <tr class="temperature-table__headings">
-                  <td>Дома</td>
-                  <td>За окном</td>
-                </tr>
-                <tr class="temperature-table__values">
-                  <td class="temperature-table__cell">+23</td>
-                  <td class="temperature-table__cell-with-icon">+19<span><img class="temperature-table__icon" src="img/cloud-drizzle.svg" alt="Осадки" height="26" width="26"></span></td>
-                </tr>
-              </table>
+          <section class="dashboard__section dashboard__section_subsection_main main">
+            <h2 class="dashboard__section-title">Главное</h2>
+            <div class="main__wrapper">
+              <div class="main__info-block">
+                <p class="main__greeting">Привет, <span class="main__username">Геннадий!</span></p>
+                <p class="main__info">Двери и окна закрыты, сигнализация&nbsp;включена.</p>
+                <table class="main__temperature-table temperature-table">
+                  <tr class="temperature-table__headings">
+                    <td>Дома</td>
+                    <td>За окном</td>
+                  </tr>
+                  <tr class="temperature-table__values">
+                    <td class="temperature-table__cell">+23</td>
+                    <td class="temperature-table__cell-with-icon">+19<span><img class="temperature-table__icon" src="img/cloud-drizzle.svg" alt="Осадки" height="26" width="26"></span></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="main__slider slider slider_main">
+                <button class="slider__nav-btn slider__nav-btn_main btn-slider-nav btn-slider-nav_type_double-arrow btn-slider-nav_direction_top"></button>
+                <div class="slider__content-wrapper main-devices">
+                  <button class="main-devices__item btn btn_device">
+                    <span class="btn__icon btn__icon_type_heat"></span>
+                    <span class="btn__main-text">Philips Cooler</span>
+                    <span class="btn__state-text">Начнет охлаждать в <span class="btn__time-text">16:30</span></span>
+                  </button>
+                  <button class="main-devices__item btn btn_device">
+                    <span class="btn__icon btn__icon_type_light"></span>
+                    <span class="btn__main-text">Xiaomi Yeelight LED Smart Bulb</span>
+                    <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span>
+                  </button>
+                  <button class="main-devices__item btn btn_device btn_type_light btn_state_active">
+                    <span class="btn__icon btn__icon_type_light"></span>
+                    <span class="btn__main-text">LIFX Mini Day & Dusk A60 E27</span>
+                    <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="main__slider slider slider_main">
-              <button class="slider__nav-btn slider__nav-btn_main btn-slider-nav btn-slider-nav_type_double-arrow btn-slider-nav_direction_top"></button>
-              <div class="slider__content-wrapper main-devices">
-                <button class="main-devices__item btn btn_device">
-                  <span class="btn__icon btn__icon_type_heat"></span>
-                  <span class="btn__main-text">Philips Cooler</span>
-                  <span class="btn__state-text">Начнет охлаждать в <span class="btn__time-text">16:30</span></span>
+          </section>
+
+          <!-- сценарии -->
+
+          <section class="dashboard__section dashboard__section_subsection_scripts scripts">
+            <h2 class="dashboard__section-title">Избранные сценарии</h2>
+            <div class="scripts__slider slider">
+              <div class="slider__nav-btn-wrapper">
+                <!-- нужно ли scripts__slider-btn ?  -->
+                <button class="slider__nav-btn btn-slider-nav btn-slider-nav_type_single-arrow"></button>
+                <button class="slider__nav-btn btn-slider-nav btn-slider-nav_type_single-arrow btn-slider-nav_direction_right"></button>
+              </div>
+              <div class="slider__content-wrapper scenarios">
+                <button class="scenarios__item btn btn_scenario">
+                  <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
+                  <span class="btn__main-text">Выключить весь свет в доме и во дворе</span>
                 </button>
-                <button class="main-devices__item btn btn_device">
-                  <span class="btn__icon btn__icon_type_light"></span>
-                  <span class="btn__main-text">Xiaomi Yeelight LED Smart Bulb</span>
-                  <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span>
+                <button class="scenarios__item btn btn_scenario">
+                  <span class="btn__icon btn__icon_type_time"></span>
+                  <span class="btn__main-text">Я ухожу</span>
                 </button>
-                <button class="main-devices__item btn btn_device btn_type_light btn_state_active">
-                  <span class="btn__icon btn__icon_type_light"></span>
-                  <span class="btn__main-text">LIFX Mini Day & Dusk A60 E27</span>
-                  <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span>
+                <button class="scenarios__item btn btn_scenario">
+                  <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
+                  <span class="btn__main-text">Включить свет в коридоре</span>
+                </button>
+                <button class="scenarios__item btn btn_scenario">
+                  <span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>
+                  <span class="btn__main-text">Набрать горячую ванну</span>
+                  <span class="btn__state-text">Начнётся в <span class="btn__time-text">18:00</span></span>
+                </button>
+                <button class="scenarios__item btn btn_scenario btn_state_active">
+                  <span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>
+                  <span class="btn__main-text">Сделать пол тёплым во всей квартире</span>
                 </button>
               </div>
             </div>
+          </section>
+        </div>
+
+        <!-- устройства -->
+
+        <section class="dashboard__section dashboard__section_subsection_equipment equipment">
+          <div class="equipment__wrapper">
+            <h2 class="dashboard__section-title">Избранные устройства</h2>
+            <div class="equipment__menu-wrapper">
+              <div class="equipment__menu-btn-select btn-select">
+                // переделать на button
+                <input type="checkbox" name="btn-select__toggle" id="btn-select__toggle" class="btn-select__toggle">
+                <label for="btn-select__toggle" class="btn-select__label">Кнопка меню</label>
+              </div>
+              <ul class="equipment__filters-menu filters-menu">
+                <li class="filters-menu__item">
+                  <button class="filters-menu__btn filter-btn filter-btn_state_active">Все</button>
+                </li>
+                <li class="filters-menu__item">
+                  <button class="filters-menu__btn filter-btn">Кухня</button>
+                </li>
+                <li class="filters-menu__item">
+                  <button class="filters-menu__btn filter-btn">Зал</button>
+                </li>
+                <li class="filters-menu__item">
+                  <button class="filters-menu__btn filter-btn">Лампочки</button>
+                </li>
+                <li class="filters-menu__item">
+                  <button class="filters-menu__btn filter-btn">Камеры</button>
+                </li>
+              </ul>
+            </div>
           </div>
-        </section>
-
-        <!-- сценарии -->
-
-        <section class="dashboard__section dashboard__section_subsection_scripts scripts">
-          <h2 class="dashboard__section-title">Избранные сценарии</h2>
-          <div class="scripts__slider slider">
-            <div class="slider__nav-btn-wrapper">
-              <!-- нужно ли scripts__slider-btn ?  -->
+          <div class="equipment__slider slider">
+            <div class="slider__nav-btn-wrapper slider__nav-btn-wrapper_subsection_equipment">
               <button class="slider__nav-btn btn-slider-nav btn-slider-nav_type_single-arrow"></button>
-              <button class="slider__nav-btn btn-slider-nav btn-slider-nav_type_single-arrow btn-slider-nav_direction_right"></button>
+              <button class="slider__nav-btn btn-slider-nav btn-slider-nav_type_single-arrow btn-slider-nav_direction_right btn-slider-nav_state_active"></button>
             </div>
-            <div class="slider__content-wrapper scenarios">
-              <button class="scenarios__item btn btn_scenario">
+            <div class="slider__content-wrapper devices">
+              <button class="devices__item btn btn_device">
                 <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
-                <span class="btn__main-text">Выключить весь свет в доме и во дворе</span>
+                <span class="btn__main-text">Xiaomi Yeelight LED Smart Bulb</span>
+                <span class="btn__state-text">Включено</span>
               </button>
-              <button class="scenarios__item btn btn_scenario">
-                <span class="btn__icon btn__icon_type_time"></span>
-                <span class="btn__main-text">Я ухожу</span>
+              <button class="devices__item btn btn_device">
+                <span class="btn__icon btn__icon_type_light"></span>
+                <span class="btn__main-text">Xiaomi Yeelight LED Smart Bulb</span>
+                <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span>
               </button>
-              <button class="scenarios__item btn btn_scenario">
+              <button class="devices__item btn btn_device">
+                <span class="btn__icon btn__icon_type_heat"></span>
+                <span class="btn__main-text">Elgato Eve Degree Connected</span>
+                <span class="btn__state-text">Выключено до<span class="btn__time-text">17:00</span></span>
+              </button>
+              <button class="devices__item btn btn_device">
+                <span class="btn__icon btn__icon_type_light"></span>
+                <span class="btn__main-text">LIFX Mini Day & Dusk A60 E27</span>
+                <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span>
+              </button>
+              <button class="devices__item btn btn_device">
                 <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
-                <span class="btn__main-text">Включить свет в коридоре</span>
+                <span class="btn__main-text">Xiaomi Mi Air Purifier 2S</span>
+                <span class="btn__state-text">Включено</span>
               </button>
-              <button class="scenarios__item btn btn_scenario">
-                <span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>
-                <span class="btn__main-text">Набрать горячую ванну</span>
-                <span class="btn__state-text">Начнётся в <span class="btn__time-text">18:00</span></span>
+              <button class="devices__item btn btn_device">
+                <span class="btn__icon btn__icon_type_light"></span>
+                <span class="btn__main-text">Philips Zhirui</span>
+                <span class="btn__state-text">Выключено</span>
               </button>
-              <button class="scenarios__item btn btn_scenario btn_state_active">
-                <span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>
-                <span class="btn__main-text">Сделать пол тёплым во всей квартире</span>
+              <button class="devices__item btn btn_device">
+                <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
+                <span class="btn__main-text">Xiaomi Mi Air Purifier 2S</span>
+
+
+                <span class="btn__state-text">Включено</span>
               </button>
             </div>
           </div>
         </section>
-      </div>
+      </main>
 
-      <!-- устройства -->
+      <!--футер -->
 
-      <section class="dashboard__section dashboard__section_subsection_equipment equipment">
-        <div class="equipment__wrapper">
-          <h2 class="dashboard__section-title">Избранные устройства</h2>
-          <div class="equipment__menu-wrapper">
-            <div class="equipment__menu-btn-select btn-select">
-              // переделать на button
-              <input type="checkbox" name="btn-select__toggle" id="btn-select__toggle" class="btn-select__toggle">
-              <label for="btn-select__toggle" class="btn-select__label">Кнопка меню</label>
-            </div>
-            <ul class="equipment__filters-menu filters-menu">
-              <li class="filters-menu__item">
-                <button class="filters-menu__btn filter-btn filter-btn_state_active">Все</button>
+      <footer class="page__footer footer">
+        <div class="footer__wrapper">
+          <nav class="footer__nav info-nav">
+            <h2 class="visually-hidden">Пользовательское меню</h2>
+            <ul class="info-nav__list">
+              <li class="info-nav__item">
+                <a href="#" class="info-nav__link">Помощь</a>
               </li>
-              <li class="filters-menu__item">
-                <button class="filters-menu__btn filter-btn">Кухня</button>
+              <li class="info-nav__item">
+                <a href="#" class="info-nav__link">Обратная связь</a>
               </li>
-              <li class="filters-menu__item">
-                <button class="filters-menu__btn filter-btn">Зал</button>
+              <li class="info-nav__item">
+                <a href="#" class="info-nav__link">Разработчикам</a>
               </li>
-              <li class="filters-menu__item">
-                <button class="filters-menu__btn filter-btn">Лампочки</button>
-              </li>
-              <li class="filters-menu__item">
-                <button class="filters-menu__btn filter-btn">Камеры</button>
+              <li class="info-nav__item">
+                <a href="#" class="info-nav__link">Условия использования</a>
               </li>
             </ul>
-          </div>
+          </nav>
+          <div class="footer__copyright">© 2001–2017 ООО «Яндекс»</div>
         </div>
-        <div class="equipment__slider slider">
-          <div class="slider__nav-btn-wrapper slider__nav-btn-wrapper_subsection_equipment">
-            <button class="slider__nav-btn btn-slider-nav btn-slider-nav_type_single-arrow"></button>
-            <button class="slider__nav-btn btn-slider-nav btn-slider-nav_type_single-arrow btn-slider-nav_direction_right btn-slider-nav_state_active"></button>
-          </div>
-          <div class="slider__content-wrapper devices">
-            <button class="devices__item btn btn_device">
-              <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
-              <span class="btn__main-text">Xiaomi Yeelight LED Smart Bulb</span>
-              <span class="btn__state-text">Включено</span>
-            </button>
-            <button class="devices__item btn btn_device">
-              <span class="btn__icon btn__icon_type_light"></span>
-              <span class="btn__main-text">Xiaomi Yeelight LED Smart Bulb</span>
-              <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span>
-            </button>
-            <button class="devices__item btn btn_device">
-              <span class="btn__icon btn__icon_type_heat"></span>
-              <span class="btn__main-text">Elgato Eve Degree Connected</span>
-              <span class="btn__state-text">Выключено до<span class="btn__time-text">17:00</span></span>
-            </button>
-            <button class="devices__item btn btn_device">
-              <span class="btn__icon btn__icon_type_light"></span>
-              <span class="btn__main-text">LIFX Mini Day & Dusk A60 E27</span>
-              <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span>
-            </button>
-            <button class="devices__item btn btn_device">
-              <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
-              <span class="btn__main-text">Xiaomi Mi Air Purifier 2S</span>
-              <span class="btn__state-text">Включено</span>
-            </button>
-            <button class="devices__item btn btn_device">
-              <span class="btn__icon btn__icon_type_light"></span>
-              <span class="btn__main-text">Philips Zhirui</span>
-              <span class="btn__state-text">Выключено</span>
-            </button>
-            <button class="devices__item btn btn_device">
-              <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
-              <span class="btn__main-text">Xiaomi Mi Air Purifier 2S</span>
-
-
-              <span class="btn__state-text">Включено</span>
-            </button>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!--футер -->
-
-    <footer class="page__footer footer">
-      <div class="footer__wrapper">
-        <nav class="footer__nav info-nav">
-          <h2 class="visually-hidden">Пользовательское меню</h2>
-          <ul class="info-nav__list">
-            <li class="info-nav__item">
-              <a href="#" class="info-nav__link">Помощь</a>
-            </li>
-            <li class="info-nav__item">
-              <a href="#" class="info-nav__link">Обратная связь</a>
-            </li>
-            <li class="info-nav__item">
-              <a href="#" class="info-nav__link">Разработчикам</a>
-            </li>
-            <li class="info-nav__item">
-              <a href="#" class="info-nav__link">Условия использования</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="footer__copyright">© 2001–2017 ООО «Яндекс»</div>
-      </div>
-    </footer>
-
-    <!-- попапы -->
+      </footer>
+    </div>
+      <!-- попапы -->
 
     <section class="page__popup popup popup_type_heat">
       <div class="popup__wrapper">
@@ -294,14 +294,35 @@
     <section class="page__popup popup popup_type_floor">
       <div class="popup__wrapper">
         <form action="#" method="get"  class="popup__content device">
-          <div class="device__panel">
+          <div class="popup__device-wrapper device__wrapper device__wrapper_type_floor">
             <h2 class="device__name">Xiaomi Warm Floor</h2>
             <p class="device__state-text">Включено</p>
             <p class="device__value">+23</p>
             <!-- <p class="device__icon">термометр</p>  ???? или фоном-->
             <div class="device__control-wrapper device__control-wrapper_type_floor">
-              <div class="device__control control control_type_floor"></div>
+              <svg class="device__control control control_type_floor" width="221px" height="221px" viewBox="0 0 221 221">
+                <radialGradient id="grad-grey"
+                                x1="0%" y1="0%"
+                                x2="0%" y2="99%">
+                  <stop offset="0%" stop-color="grey" />
+                  <stop offset="99%" stop-color="grey" />
+                  <stop offset="99%" stop-color="white" />
+
+                </radialGradient>
+                <radialGradient id="grad-orange"
+                                x1="0%" y1="0%"
+                                x2="0%" y2="99%">
+                  <stop offset="0%" stop-color="orange" />
+                  <stop offset="99%" stop-color="orange" />
+                  <stop offset="99%" stop-color="white" />
+
+                </radialGradient>
+                <circle r="111" cx="111" cy="111" class="control__grade" fill="url(#grad-grey)" stroke="url(#grad-orange)"/>
+                <circle class="control__dash-mask" r="90" cx="111" cy="111" fill="white" stroke="white" stroke-width="50px" stroke-dasharray="3 1"/>
+                <circle class="control__gap-mask" r="111" cx="111" cy="111" fill="none" stroke="white" stroke-width="45px" stroke-dasharray="0 580 120"/>
+              </svg>
               <div class="control__thumb"></div>
+              <p class="control__value">+23</p>
             </div>
           </div>
           <button class="popup__btn popup__btn_type_apply" type="submit">Применить</button>
@@ -309,6 +330,8 @@
         </form>
       </div>
     </section>
+    <script src="js/main.js"></script>
+
   </body>
 
 </html>
