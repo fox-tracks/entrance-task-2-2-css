@@ -7,6 +7,10 @@
 
   &__section {
     width: 49%;
+
+    &_subsection_main {
+      min-width: 400px;
+    }
   }
 
   &__section_subsection_equipment {
@@ -20,6 +24,18 @@
   }
 }
 
+@media (max-width: 965px) {
+  .dashboard {
+    &__section {
+
+      &_subsection_scripts {
+        width: 45vw;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
 @media (max-width: 720px) {
 
   .dashboard {
@@ -29,9 +45,17 @@
 
     &__section {
       width: 100%;
-      max-width: 630px;
       min-width: 335px;
+
+      &_subsection_scripts {
+        width: 100%;
+        margin-left: 0;
+        margin-right: -3%;
+      }
+
     }
   }
 
 }
+
+

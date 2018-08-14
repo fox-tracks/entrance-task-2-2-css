@@ -97,31 +97,34 @@
             <div class="scripts__slider slider">
               <div class="slider__nav-btn-wrapper">
                 <!-- нужно ли scripts__slider-btn ?  -->
-                <button class="slider__nav-btn btn-slider-nav btn-slider-nav_type_single-arrow"></button>
-                <button class="slider__nav-btn btn-slider-nav btn-slider-nav_type_single-arrow btn-slider-nav_direction_right"></button>
+                <button class="slider__nav-btn btn-slider-nav btn-slider-nav_section_scenarios btn-slider-nav_type_single-arrow btn-slider-nav_direction_left"></button>
+                <button class="slider__nav-btn btn-slider-nav btn-slider-nav_section_scenarios btn-slider-nav_type_single-arrow btn-slider-nav_direction_right"></button>
               </div>
+
               <div class="slider__content-wrapper scenarios">
-                <button class="scenarios__item btn btn_scenario">
-                  <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
-                  <span class="btn__main-text">Выключить весь свет в доме и во дворе</span>
-                </button>
-                <button class="scenarios__item btn btn_scenario">
-                  <span class="btn__icon btn__icon_type_time"></span>
-                  <span class="btn__main-text">Я ухожу</span>
-                </button>
-                <button class="scenarios__item btn btn_scenario">
-                  <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
-                  <span class="btn__main-text">Включить свет в коридоре</span>
-                </button>
-                <button class="scenarios__item btn btn_scenario">
-                  <span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>
-                  <span class="btn__main-text">Набрать горячую ванну</span>
-                  <span class="btn__state-text">Начнётся в <span class="btn__time-text">18:00</span></span>
-                </button>
-                <button class="scenarios__item btn btn_scenario btn_state_active">
-                  <span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>
-                  <span class="btn__main-text">Сделать пол тёплым во всей квартире</span>
-                </button>
+                <div class="scenarios__wrapper">
+                  <button class="scenarios__item btn btn_scenario">
+                    <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
+                    <span class="btn__main-text">Выключить весь свет в доме и во дворе</span>
+                  </button>
+                  <button class="scenarios__item btn btn_scenario">
+                    <span class="btn__icon btn__icon_type_time"></span>
+                    <span class="btn__main-text">Я ухожу</span>
+                  </button>
+                  <button class="scenarios__item btn btn_scenario">
+                    <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
+                    <span class="btn__main-text">Включить свет в коридоре</span>
+                  </button>
+                  <button class="scenarios__item btn btn_scenario">
+                    <span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>
+                    <span class="btn__main-text">Набрать горячую ванну</span>
+                    <span class="btn__state-text">Начнётся в <span class="btn__time-text">18:00</span></span>
+                  </button>
+                  <button class="scenarios__item btn btn_scenario btn_state_active">
+                    <span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>
+                    <span class="btn__main-text">Сделать пол тёплым во всей квартире</span>
+                  </button>
+                </div>
               </div>
             </div>
           </section>
@@ -159,8 +162,8 @@
           </div>
           <div class="equipment__slider slider">
             <div class="slider__nav-btn-wrapper slider__nav-btn-wrapper_subsection_equipment">
-              <button class="slider__nav-btn btn-slider-nav btn-slider-nav_type_single-arrow"></button>
-              <button class="slider__nav-btn btn-slider-nav btn-slider-nav_type_single-arrow btn-slider-nav_direction_right btn-slider-nav_state_active"></button>
+              <button class="slider__nav-btn btn-slider-nav btn-slider-nav_section_devices btn-slider-nav_type_single-arrow btn-slider-nav_direction_left"></button>
+              <button class="slider__nav-btn btn-slider-nav btn-slider-nav_section_devices btn-slider-nav_type_single-arrow btn-slider-nav_direction_right btn-slider-nav_state_active"></button>
             </div>
             <div class="slider__content-wrapper devices">
               <button class="devices__item btn btn_device">
@@ -249,7 +252,7 @@
               <input type="radio" name="presets__item" value="hot" id="presets_value_hot" class="presets__item">
               <label for="presets_value_hot" class="presets__label">Жарко</label>
             </div>
-            <div class="device__control-wrapper">
+            <div class="device__control-wrapper device__control-wrapper_type_heat">
               <input type="range" min="-10" max="30" step="1" value="16" id="control_type_heat" class="device__control control control_type_heat">
               <label for="control_type_heat" class="control__label control__label_min">-10</label>
               <label for="control_type_heat" class="control__label control__label_max">+30</label>
@@ -276,7 +279,7 @@
               <input type="radio" name="presets__item" value="dawn" id="presets_value_dawn" class="presets__item ">
               <label for="presets_value_dawn" class="presets__label">Рассвет</label>
             </div>
-            <div class="device__control-wrapper">
+            <div class="device__control-wrapper device__control-wrapper_type_light">
               <input type="range" min="1" max="52" step="1" value="35" class="device__control control control_type_light">
             </div>
 
@@ -322,7 +325,7 @@
                 <circle class="control__gap-mask" r="111" cx="111" cy="111" fill="none" stroke="white" stroke-width="45px" stroke-dasharray="0 580 120"/>
               </svg>
               <div class="control__thumb"></div>
-              <p class="control__value">+23</p>
+              <p class="control__value"><span>+23</span></p>
             </div>
           </div>
           <button class="popup__btn popup__btn_type_apply" type="submit">Применить</button>

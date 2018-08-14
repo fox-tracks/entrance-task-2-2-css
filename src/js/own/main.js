@@ -10,6 +10,49 @@
     hamburgerBtn.classList.toggle('hamburger-btn_action_close')
   });
 
+  // листалка scenarios
+
+  const bntRightScenarios = document.querySelector('.btn-slider-nav_section_scenarios.btn-slider-nav_direction_right');
+  const bntLeftScenarios = document.querySelector('.btn-slider-nav_section_scenarios.btn-slider-nav_direction_left');
+  const scenariosWrapper =  document.querySelector('.scenarios__wrapper');
+  const scenarios = document.querySelectorAll('.scenarios__item');
+  const columnsScenarios = Math.ceil(scenarios.length / 3);
+
+  if ((window.matchMedia("(max-width: 800px)").matches && columnsScenarios > 1) ||
+      (window.matchMedia("(max-width: 1040px)").matches && columnsScenarios > 2) ||
+      (window.matchMedia("(min-width: 1041px)").matches && columnsScenarios > 3)) {
+    bntRightScenarios.classList.add('btn-slider-nav_state_active');
+  };
+
+  bntRightScenarios.addEventListener('click', (e) => {
+    let transform = getComputedStyle(scenariosWrapper).getPropertyValue('transform');
+
+    if (transform === 'none' || transform === 'matrix(1, 0, 0, 1, 0, 0)') {
+      scenariosWrapper.style.transform = 'translateX(-100%)';
+      bntLeftScenarios.classList.add('btn-slider-nav_state_active');
+      columnsScenarios === 2 && bntRightScenarios.classList.remove('btn-slider-nav_state_active');
+    } else if ((transform === 'matrix(1, 0, 0, 1, -228, 0)') &&  columnsScenarios === 3) {
+      scenariosWrapper.style.transform = 'translateX(-200%)';
+      bntRightScenarios.classList.remove('btn-slider-nav_state_active');
+    } else {
+      e.preventDefault();
+    }
+  });
+
+  bntLeftScenarios.addEventListener('click', (e) => {
+    let transform = getComputedStyle(scenariosWrapper).getPropertyValue('transform');
+
+    if(transform === 'none' || transform === 'matrix(1, 0, 0, 1, 0, 0)') {
+      e.preventDefault();
+    } else if (transform === 'matrix(1, 0, 0, 1, -228, 0)') {
+      scenariosWrapper.style.transform = 'translateX(0)';
+      bntRightScenarios.classList.add('btn-slider-nav_state_active');
+      bntLeftScenarios.classList.remove('btn-slider-nav_state_active');
+    } else if ((transform === 'translateX(-200%)') &&  columnsScenarios === 3) {
+      scenariosWrapper.style.transform = 'translateX(-100%)';
+      bntRightScenarios.classList.add('btn-slider-nav_state_active');
+    }
+  });
 
   // крутилка
 
@@ -42,7 +85,6 @@
 
       let pointerEvent = e;
       if (e.targetTouches && e.targetTouches[0]) {
-        // e.preventDefault();
         pointerEvent = e.targetTouches[0];
         mouseX = pointerEvent.pageX;
         mouseY = pointerEvent.pageY;

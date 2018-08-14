@@ -1,13 +1,69 @@
 .scenarios {
-  display: grid;
-  grid-gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-auto-rows: 100px;
+  height: 330px;
+  overflow-x: hidden;
 
-
-
+  &__wrapper {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 100px;
+  }
 
   &__item {
     width: auto;
+    max-width: 228px;
+  }
+}
+
+@media (max-width: 800px) {
+  .scenarios {
+    width: 228px;
+    margin: 0 auto;
+
+    &__wrapper {
+
+      height: 330px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: flex-start;
+    }
+
+    &__item {
+      margin-bottom: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 228px;
+    }
+
+    &__item:nth-child(3n) {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+@media (max-width: 720px) {
+  .scenarios {
+    width: 103%;
+    min-width: 375px;
+    height: 100px;
+    margin-right: -3%;
+
+    &__wrapper {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      height: 100px;
+    }
+
+    &__item {
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 15px;
+      width: 200px;
+      flex-shrink: 0;
+    }
+
   }
 }

@@ -13,6 +13,7 @@
 
   &_scenario {
     height: 100px;
+    //max-width: 228px;
   }
 
   &_device {
@@ -23,13 +24,14 @@
   }
 
   &_device:last-child {
+    margin-right: 0;
     position: relative;
   }
 
   &_device:last-child::after {
     display: block;
     content: '';
-    width: 40px;
+    width: 3vw;
     height: 120px;
     position: absolute;
     left: 100%;
@@ -86,6 +88,10 @@
       max-width: 200px;
       width: 100%;
     }
+
+    //&_scenario {
+    //  margin-bottom: 15px;
+    //}
   }
 }
 

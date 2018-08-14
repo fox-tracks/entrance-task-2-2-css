@@ -75,6 +75,12 @@
       height: 492px;
       padding: 20px 0 20px 20px;
       background-image: none;
+
+      &_type_floor {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     &__name {
@@ -87,10 +93,15 @@
       line-height: 14px;
     }
 
-    &__control-wrapper {
+    &__control-wrapper_type_light,
+    &__control-wrapper_type_heat {
       font-size: 0;
       width: 336px;
       transform: rotate(-90deg) translate(-137px, -20px);
+    }
+
+    &__control-wrapper_type_floor {
+      margin-top: 83px;
     }
 
     &__value {
