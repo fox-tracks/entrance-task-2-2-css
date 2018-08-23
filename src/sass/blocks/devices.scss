@@ -1,20 +1,36 @@
 .devices {
-  height: 120px;
+  height: 138px;
   max-width: 1366px;
+  overflow-x: hidden;
   margin-left: 3%;
-  padding-right: 3%;
-  overflow-x: scroll;
-  display: flex;
-  justify-content: left;
+
+  &__wrapper {
+    transition: transform 0.3s;
+    max-width: 1366px;
+    padding-right: 3%;
+    display: flex;
+    justify-content: left;
+    height: 138px;
+  }
+
 
   &__item {
     margin-right: 15px;
   }
 }
 
-//@media (min-width: 1367px) {
+@media (max-width: 720px) {
+  .devices {
+    &__wrapper {
+      overflow-x: scroll;
+    }
+  }
+}
+
+//@media (max-width: 500px) {
 //  .devices {
-//    margin: 0 auto;
-//    padding-left: 40px;
+//    &__wrapper {
+//      overflow-x: scroll;
+//    }
 //  }
 //}

@@ -2,15 +2,62 @@
   &__wrapper {
     @include wrapper();
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: flex-start;
   }
+  &__menu-toggle {
+    display: none;
+  }
+
+
 }
 
 @media (min-width: 1367px) {
   .equipment {
     &__slider {
       margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .equipment {
+    &__wrapper {
+      height: 71px;
+    }
+
+    &__menu-wrapper {
+      margin-left: auto;
+      position: relative;
+    }
+
+    &__menu-toggle-wrapper {
+      width: 114px;
+      display: block;
+    }
+
+    &__menu-toggle {
+      display: flex;
+      margin: 0 auto;
+      height: 30.4px;
+      font-size: 13px;
+      line-height: 15px;
+      font-weight: bold;
+      background-color: #FFD93E;
+      border-radius: 20px;
+      padding: 8px 30px 8px 15px;
+      background-image: url("../img/Icons/arrow-down.svg");
+      background-size: 9px 14px;
+      background-repeat: no-repeat;
+      background-position: right 15px center;
+      outline: none;
+
+      &:focus {
+        outline: none;
+      }
+      &:active {
+        box-shadow: 0 2px 6px 0 rgba(146, 141, 141, 0.5);
+      }
     }
   }
 }

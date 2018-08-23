@@ -7,3 +7,19 @@
     margin-bottom: 15px;
   }
 }
+
+
+@media (max-width: 500px) {
+  .main-devices {
+    overflow-x: auto;
+    display: flex;
+    height: 138px;
+    margin-top: 20px;
+
+    &__item {
+      margin-right: 15px;
+      margin-bottom: 0;
+      overflow-y: auto;
+    }
+  }
+}

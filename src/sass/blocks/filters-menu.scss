@@ -1,13 +1,38 @@
 .filters-menu {
-  @include no-list();
   margin-left: 13px;
   display: flex;
   font-size: 13px;
   line-height: 15px;
   font-weight: bold;
+}
 
-  &__item {
-    margin-right: 10px;
+@media (max-width: 660px) {
+  .filters-menu {
+    display: none;
+    flex-direction: column;
+    margin-left: auto;
+    width: 114px;
+    align-items: center;
+    padding: 5px 0;
+    box-shadow: 0 2px 6px 0 rgba(146, 141, 141, 0.5);
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    z-index: 1;
+
+    //&__item:not(:checked) + .filter-bnt__label{
+    //  position: absolute;
+    //  width: 1px;
+    //  height: 1px;
+    //  margin: -1px;
+    //  padding: 0;
+    //  border: 0;
+    //  clip: rect(0 0 0 0);
+    //  overflow: hidden;
+    //}
   }
+
 
 }

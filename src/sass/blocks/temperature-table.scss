@@ -21,3 +21,22 @@
     margin-left: 5px;
   }
 }
+
+@media (max-width: 500px) {
+  .temperature-table {
+    &__headings {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    &__values {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &__icon {
+      height: 17.2px;
+      width: 17.2px;
+    }
+  }
+}

@@ -21,7 +21,7 @@
     margin: 0 auto;
 
     &__wrapper {
-
+      transition: transform 0.3s;
       height: 330px;
       display: flex;
       flex-direction: column;
@@ -47,14 +47,14 @@
   .scenarios {
     width: 103%;
     min-width: 375px;
-    height: 100px;
+    height: 118px;
     margin-right: -3%;
 
     &__wrapper {
       flex-direction: row;
       flex-wrap: nowrap;
       overflow-x: scroll;
-      height: 100px;
+      height: 118px;
     }
 
     &__item {

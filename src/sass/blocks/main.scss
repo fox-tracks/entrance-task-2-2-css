@@ -28,4 +28,31 @@
   }
 }
 
+@media (max-width: 500px) {
+  .main {
+    &__wrapper {
+      flex-direction: column;
+      padding: 20px 0 20px 20px;
+      min-width: 335px;
+      height: 282px;
+
+    }
+
+    &__greeting {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    &__info {
+      font-size: 12px;
+      line-height: 14px;
+      margin: 5px 0 15px;
+    }
+
+    &__info-block {
+      margin-bottom: 20px;
+    }
+  }
+}
+
 

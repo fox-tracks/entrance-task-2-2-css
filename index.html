@@ -51,7 +51,7 @@
           <!-- сводка  -->
 
           <section class="dashboard__section dashboard__section_subsection_main main">
-            <h2 class="dashboard__section-title">Главное</h2>
+            <h2 class="dashboard__section-title dashboard__section-title_subsection_main">Главное</h2>
             <div class="main__wrapper">
               <div class="main__info-block">
                 <p class="main__greeting">Привет, <span class="main__username">Геннадий!</span></p>
@@ -112,9 +112,9 @@
                     <span class="btn__main-text">Я ухожу</span>
                   </button>
                   <button class="scenarios__item btn btn_scenario">
-                    <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
-                    <span class="btn__main-text">Включить свет в коридоре</span>
-                  </button>
+                  <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
+                  <span class="btn__main-text">Включить свет в коридоре</span>
+                </button>
                   <button class="scenarios__item btn btn_scenario">
                     <span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>
                     <span class="btn__main-text">Набрать горячую ванну</span>
@@ -124,6 +124,23 @@
                     <span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>
                     <span class="btn__main-text">Сделать пол тёплым во всей квартире</span>
                   </button>
+                  <!--<button class="scenarios__item btn btn_scenario">-->
+                    <!--<span class="btn__icon btn__icon_type_time"></span>-->
+                    <!--<span class="btn__main-text">Я ухожу</span>-->
+                  <!--</button>-->
+                  <!--<button class="scenarios__item btn btn_scenario">-->
+                    <!--<span class="btn__icon btn__icon_type_time"></span>-->
+                    <!--<span class="btn__main-text">Я ухожу</span>-->
+                  <!--</button>-->
+                  <!--<button class="scenarios__item btn btn_scenario">-->
+                    <!--<span class="btn__icon btn__icon_type_time"></span>-->
+                    <!--<span class="btn__main-text">Я ухожу</span>-->
+                  <!--</button>-->
+                  <!--<button class="scenarios__item btn btn_scenario btn_state_active">-->
+                    <!--<span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>-->
+                    <!--<span class="btn__main-text">Сделать пол тёплым во всей квартире</span>-->
+                  <!--</button>-->
+
                 </div>
               </div>
             </div>
@@ -136,28 +153,23 @@
           <div class="equipment__wrapper">
             <h2 class="dashboard__section-title">Избранные устройства</h2>
             <div class="equipment__menu-wrapper">
-              <div class="equipment__menu-btn-select btn-select">
-                // переделать на button
-                <input type="checkbox" name="btn-select__toggle" id="btn-select__toggle" class="btn-select__toggle">
-                <label for="btn-select__toggle" class="btn-select__label">Кнопка меню</label>
+              <div class="equipment__menu-toggle-wrapper">
+                <button class="equipment__menu-toggle">
+                  <span class="equipment__menu-toggle-text">Все</span>
+                </button>
               </div>
-              <ul class="equipment__filters-menu filters-menu">
-                <li class="filters-menu__item">
-                  <button class="filters-menu__btn filter-btn filter-btn_state_active">Все</button>
-                </li>
-                <li class="filters-menu__item">
-                  <button class="filters-menu__btn filter-btn">Кухня</button>
-                </li>
-                <li class="filters-menu__item">
-                  <button class="filters-menu__btn filter-btn">Зал</button>
-                </li>
-                <li class="filters-menu__item">
-                  <button class="filters-menu__btn filter-btn">Лампочки</button>
-                </li>
-                <li class="filters-menu__item">
-                  <button class="filters-menu__btn filter-btn">Камеры</button>
-                </li>
-              </ul>
+              <form action="#" metod="get" class="equipment__filters-menu filters-menu">
+                <input type="radio" name="filters__item" value="all" data-html="Все" id="filter-btn_value_all" class="filters-menu__item filter-btn filter-btn_value_all filter-btn_state_active" checked>
+                <label for="filter-btn_value_all" class="filter-btn__label">Все</label>
+                <input type="radio" name="filters__item" value="kitchen" data-html="Кухня" id="filter-btn_value_kitchen" class="filters-menu__item filter-btn filter-btn_value_kitchen">
+                <label for="filter-btn_value_kitchen" class="filter-btn__label">Кухня</label>
+                <input type="radio" name="filters__item" value="room" data-html="Зал" id="filter-btn_value_room" class="filters-menu__item filter-btn filter-btn_value_room"">
+                <label for="filter-btn_value_room" class="filter-btn__label">Зал</label>
+                <input type="radio" name="filters__item" value="lights" data-html="Лампочки" id="filter-btn_value_bulbs" class="filters-menu__item filter-btn filter-btn_value_bulbs">
+                <label for="filter-btn_value_bulbs" class="filter-btn__label">Лампочки</label>
+                <input type="radio" name="filters__item" value="cameras" data-html="Камеры" id="filter-btn_value_cameras" class="filters-menu__item filter-btn filter-btn_value_cameras">
+                <label for="filter-btn_value_cameras" class="filter-btn__label">Камеры</label>
+              </form>
             </div>
           </div>
           <div class="equipment__slider slider">
@@ -166,43 +178,48 @@
               <button class="slider__nav-btn btn-slider-nav btn-slider-nav_section_devices btn-slider-nav_type_single-arrow btn-slider-nav_direction_right btn-slider-nav_state_active"></button>
             </div>
             <div class="slider__content-wrapper devices">
-              <button class="devices__item btn btn_device">
+              <div class="devices__wrapper">
+              <button class="devices__item btn btn_device btn_action_open-popup-light filtered filtered_all filtered_bulbs filtered_kitchen">
                 <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
                 <span class="btn__main-text">Xiaomi Yeelight LED Smart Bulb</span>
                 <span class="btn__state-text">Включено</span>
               </button>
-              <button class="devices__item btn btn_device">
+              <button class="devices__item btn btn_device filtered filtered_all filtered_cameras filtered_room">
                 <span class="btn__icon btn__icon_type_light"></span>
-                <span class="btn__main-text">Xiaomi Yeelight LED Smart Bulb</span>
+                <span class="btn__main-text">D-Link Omna 180 Cam</span>
                 <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span>
               </button>
-              <button class="devices__item btn btn_device">
+              <button class="devices__item btn btn_device btn_action_open-popup-heat filtered filtered_all filtered_kitchen">
                 <span class="btn__icon btn__icon_type_heat"></span>
                 <span class="btn__main-text">Elgato Eve Degree Connected</span>
                 <span class="btn__state-text">Выключено до<span class="btn__time-text">17:00</span></span>
               </button>
-              <button class="devices__item btn btn_device">
+              <button class="devices__item btn btn_device filtered filtered_all filtered_bulbs filtered_kitchen">
                 <span class="btn__icon btn__icon_type_light"></span>
                 <span class="btn__main-text">LIFX Mini Day & Dusk A60 E27</span>
                 <span class="btn__state-text">Включится в <span class="btn__time-text">17:00</span></span>
               </button>
-              <button class="devices__item btn btn_device">
+              <button class="devices__item btn btn_device filtered filtered_all filtered_room">
                 <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
                 <span class="btn__main-text">Xiaomi Mi Air Purifier 2S</span>
                 <span class="btn__state-text">Включено</span>
               </button>
-              <button class="devices__item btn btn_device">
+              <button class="devices__item btn btn_device filtered filtered_all filtered_bulbs filtered_room">
                 <span class="btn__icon btn__icon_type_light"></span>
                 <span class="btn__main-text">Philips Zhirui</span>
                 <span class="btn__state-text">Выключено</span>
               </button>
-              <button class="devices__item btn btn_device">
+              <button class="devices__item btn btn_device filtered filtered_all filtered_kitchen">
                 <span class="btn__icon btn__icon_type_light btn__icon_state_active"></span>
                 <span class="btn__main-text">Xiaomi Mi Air Purifier 2S</span>
-
-
                 <span class="btn__state-text">Включено</span>
               </button>
+              <button class="devices__item btn btn_device btn_action_open-popup-floor filtered filtered_all filtered_room">
+                <span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>
+                <span class="btn__main-text">Xiaomi Warm Floor</span>
+                <span class="btn__state-text">Включено</span>
+              </button>
+              </div>
             </div>
           </div>
         </section>

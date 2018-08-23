@@ -31,11 +31,13 @@
 
 @media (max-width: 500px) {
   .main-nav {
+    font-size: 18px;
     width: 100%;
     height: auto;
     margin-left: 0;
     background-color: #FFF;
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 2px 6px 0 rgba(146, 141, 141, 0.5);
 
 
     &__list {
@@ -53,6 +55,11 @@
       height: 70px;
       line-height: 70px;
       text-align: center;
+      border-radius: 0 0 20px 20px;
+
+      &:active {
+        background-color: $btn-color;
+      }
     }
 
   }

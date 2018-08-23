@@ -32,3 +32,9 @@ button {
   outline: none;
   cursor: pointer;
 }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}

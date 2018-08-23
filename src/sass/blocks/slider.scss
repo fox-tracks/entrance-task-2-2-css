@@ -37,3 +37,13 @@
 
 }
 
+@media (max-width: 500px) {
+  .slider {
+    &_main {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+  }
+}
+

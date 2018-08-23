@@ -52,7 +52,12 @@
         margin-left: 0;
         margin-right: -3%;
       }
+    }
 
+    &__section-title {
+      &_subsection_main {
+        display: none;
+      }
     }
   }
 

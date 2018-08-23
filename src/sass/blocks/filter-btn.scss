@@ -1,10 +1,63 @@
 .filter-btn {
-  font: inherit;
-  background-color: $btn-color;
-  border-radius: 20px;
-  padding: 8px 15px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 
-  &_state_active {
+  &__label {
+    margin-right: 10px;
+    font: inherit;
+    background-color: $btn-color;
+    border-radius: 20px;
+    padding: 8px 15px;
+  }
+  //font: inherit;
+  //background-color: $btn-color;
+  //border-radius: 20px;
+  //padding: 8px 15px;
+  //
+  //&_state_active {
+  //  background-color: #FFD93E;
+  //}
+
+  &:checked + &__label {
     background-color: #FFD93E;
+  }
+}
+
+@media (max-width: 660px) {
+  .filter-btn {
+    &__label {
+      text-align: left;
+      margin: 0 0 3px;
+      width: 100%;
+      display: block;
+      font-weight: normal;
+      background-color: #FFFFFF;
+      border-radius: 0;
+
+      &:active {
+        background-color: $btn-color;
+      }
+    }
+
+    &:checked + &__label {
+      background-color: #FFFFFF;
+    }
+
+    //&:not(:checked) + &__label {
+    //  position: absolute;
+    //  width: 1px;
+    //  height: 1px;
+    //  margin: -1px;
+    //  padding: 0;
+    //  border: 0;
+    //  clip: rect(0 0 0 0);
+    //  overflow: hidden;
+    //}
   }
 }
