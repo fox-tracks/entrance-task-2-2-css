@@ -1,7 +1,7 @@
 // скрипты
 
 (function() {
-  // открытие/закрытие меню
+  // открытие/закрытие главного меню
   const hamburgerBtn = document.querySelector('.hamburger-btn');
   const mainNav = document.querySelector('.header__nav');
 
@@ -197,8 +197,11 @@
       item.setAttribute('checked', 'checked');
       let itemId = item.id;
 
-      filterMenuBtn.textContent = item.dataset.html; // присваивание текста выбранного фильтра в кнопку открытия меню
-      filterMenu.style.display = 'none';
+      // только для мобильной версии скрытие меню и кнопка активного пункта меню
+      if (window.matchMedia("(max-width: 500px)").matches) {
+        filterMenuBtn.textContent = item.dataset.html; // присваивание текста выбранного фильтра в кнопку открытия меню
+        filterMenu.classList.remove('filters-menu_state_visible');
+      }
 
       // фильтр девайсов
       switch (itemId) {
@@ -238,9 +241,8 @@
   });
 
   // открытие фильтр меню
-
   filterMenuBtn.addEventListener('click', ()=>{
-    filterMenu.style.display = 'flex';
+    filterMenu.classList.add('filters-menu_state_visible');
   });
 
 

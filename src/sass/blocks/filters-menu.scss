@@ -22,17 +22,10 @@
     right: 0;
     z-index: 1;
 
-    //&__item:not(:checked) + .filter-bnt__label{
-    //  position: absolute;
-    //  width: 1px;
-    //  height: 1px;
-    //  margin: -1px;
-    //  padding: 0;
-    //  border: 0;
-    //  clip: rect(0 0 0 0);
-    //  overflow: hidden;
-    //}
+
   }
 
-
+  .filters-menu_state_visible {
+    display: flex;
+  }
 }
