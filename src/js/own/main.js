@@ -318,17 +318,11 @@
   const container = document.querySelector('.main-devices');
   const doubleArrow = document.querySelector('.btn-slider-nav_type_double-arrow');
 
-  const hideDoubleArrow = () => {
+  function hideDoubleArrow () {
     doubleArrow.style.display = 'none';
-  };
+    container.removeEventListener('scroll', hideDoubleArrow);
+  }
 
-  container.addEventListener('scroll', ()=>{
-    hideDoubleArrow();
-    setTimeout()
-  })
-
-  container.removeEventListener()
-
-
+  container.addEventListener('scroll', hideDoubleArrow);
 
 })();
