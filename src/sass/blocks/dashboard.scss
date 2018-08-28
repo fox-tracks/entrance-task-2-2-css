@@ -29,6 +29,7 @@
     &__section {
 
       &_subsection_scripts {
+        min-width: 255px;
         width: 45vw;
         margin-left: 15px;
       }
@@ -36,7 +37,7 @@
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 760px) {
 
   .dashboard {
     &__wrapper {

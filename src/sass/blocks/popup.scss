@@ -1,41 +1,12 @@
 .popup {
-  // display: none;
+  visibility: hidden;
   position: fixed;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(51,51,51,0.5);
   z-index: 2;
-
-  &_show {
-    display: block;
-  }
-
-  &_type_heat {
-    display: none;
-  }
-
-  &_type_light {
-    display: none;
-  }
-
-  &_type_floor {
-    display: none;
-  }
-
-  &__wrapper {
-    // не нужен
-
-  }
-
-  &__content {
-    width: 630px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
 
   &__device-wrapper {
     width: 100%;
@@ -57,8 +28,30 @@
       background: #FFD93E;
     }
   }
+
+  &__content {
+    display: block;
+    width: 630px;
+    position: absolute;
+    //top: 50%;
+    //left: 50%;
+    z-index: 3;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+    transition: transform 0.5s, top 0.5s, left 0.5s, opacity 0.5s;
+  }
 }
 
+.popup.popup_state_visible {
+  visibility: visible;
+}
+
+.popup_state_visible .popup__content {
+  transform: translate(-50%, -50%) scale(1);
+  top: 50% !important;
+  left: 50% !important;
+  opacity: 1;
+}
 
 @media (max-width: 680px) {
   .popup {

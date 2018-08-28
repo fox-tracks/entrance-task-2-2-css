@@ -104,28 +104,32 @@
   const control = document.querySelector(".control__value");
   const controlThumb = document.querySelector('.control__thumb');
   const controlGrade = document.querySelector('.control__grade');
-  const pointerBox = control.getBoundingClientRect();
-  const centerPoint = window.getComputedStyle(control).transformOrigin;
-  const centers = centerPoint.split(' ');
+
   let move = false;
 
 
   control.addEventListener('mousedown', function(e) {
+
     move = true;
     rotatePointer(e);
   });
 
   control.addEventListener('touchstart', function(e) {
+    e.stopPropagation();
     move = true;
     rotatePointer(e);
   });
 
-  document.addEventListener('mouseup', function() {
+  document.addEventListener('mouseup', function(e) {
+
     move = false;
   });
 
 
   function rotatePointer(e) {
+    const pointerBox = control.getBoundingClientRect();
+    const centerPoint = window.getComputedStyle(control).transformOrigin;
+    const centers = centerPoint.split(' ');
     if(move) {
 
       let pointerEvent = e;
@@ -197,11 +201,8 @@
       item.setAttribute('checked', 'checked');
       let itemId = item.id;
 
-      // только для мобильной версии скрытие меню и кнопка активного пункта меню
-      if (window.matchMedia("(max-width: 500px)").matches) {
         filterMenuBtn.textContent = item.dataset.html; // присваивание текста выбранного фильтра в кнопку открытия меню
         filterMenu.classList.remove('filters-menu_state_visible');
-      }
 
       // фильтр девайсов
       switch (itemId) {
@@ -247,25 +248,85 @@
 
 
 
-    // попапы
+  // попапы
 
-  // const btnOpenPopupLight = document.querySelector('.btn_action_open-popup-light');
-  // const btnOpenPopupHeat = document.querySelector('.btn_action_open-popup-heat');
-  // const btnOpenPopupFloor = document.querySelector('.btn_action_open-popup-light');
-  //
-  // btnOpenPopupFloor.addEventListener('click', (e) => {
-  //   const btn = e.target;
-  //   const btnBox = btn.getBoundingClientRect();
-  //   const btnCenterPoint = getComputedStyle(btn).transformOrigin;
-  //   const btnCenters = centerPoint.split(' ');
-  //
-  //
-  //
-  //
-  // })
+    const btnOpenPopupLight = document.querySelector('.btn_action_open-popup-light');
+    const btnOpenPopupHeat = document.querySelector('.btn_action_open-popup-heat');
+    const btnOpenPopupFloor = document.querySelector('.btn_action_open-popup-floor');
+    const popupLight = document.querySelector('.popup_type_light');
+    const popupHeat = document.querySelector('.popup_type_heat');
+    const popupFloor = document.querySelector('.popup_type_floor');
+    const popups = document.querySelectorAll('.popup');
+    const popupBtnsClose = document.querySelectorAll('.popup__btn_type_close');
+    const page = document.querySelector('.page__wrapper');
+    const popupFloorContent = popupFloor.querySelector('.popup__content');
+
+    function blurPage() {
+      page.classList.add('page__wrapper_state_blur');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function unblurPage() {
+      page.classList.remove('page__wrapper_state_blur');
+      document.body.style.overflow = 'auto';
+    }
+
+    btnOpenPopupFloor.addEventListener('click', (e) => {
+      const btnBox = e.target.getBoundingClientRect();
+      console.log(btnBox);
+      const btnX = btnBox.left;
+      const btnY = btnBox.top;
+
+      popupFloorContent.style.top = btnY + 'px';
+      popupFloorContent.style.left = btnX + 'px';
+
+      blurPage();
+
+      setTimeout(function () {
+        popupFloor.classList.add('popup_state_visible');
+       }, 5);
+    });
+
+    btnOpenPopupLight.addEventListener('click', () => {
+      blurPage();
+      popupLight.classList.add('popup_state_visible');
+    });
+
+    btnOpenPopupHeat.addEventListener('click', () => {
+      blurPage();
+      popupHeat.classList.add('popup_state_visible');
+    });
+
+    popupBtnsClose.forEach(item => {
+      item.addEventListener('click', () => {
+        popups.forEach(item => item.classList.contains('popup_state_visible') && item.classList.remove('popup_state_visible'));
+        unblurPage();
+      })
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.keyCode === 27) {
+        popups.forEach(item => item.classList.contains('popup_state_visible') && item.classList.remove('popup_state_visible'));
+        unblurPage();
+      }
+    });
 
 
+  // скрытие кнопки по scroll
 
+  const container = document.querySelector('.main-devices');
+  const doubleArrow = document.querySelector('.btn-slider-nav_type_double-arrow');
+
+  const hideDoubleArrow = () => {
+    doubleArrow.style.display = 'none';
+  };
+
+  container.addEventListener('scroll', ()=>{
+    hideDoubleArrow();
+    setTimeout()
+  })
+
+  container.removeEventListener()
 
 
 
