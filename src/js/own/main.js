@@ -61,7 +61,6 @@
   const devices = document.querySelectorAll('.devices__item');
   const visibleDevices = Array.from(devices).filter(item => {item.style.display = 'flex'});
   const device = document.querySelector('.devices__item');
-
   const wrapperDevicesWidth = devicesWrapper.getBoundingClientRect().width;
   const deviceWidth = device.getBoundingClientRect().width;
   const margin = (getComputedStyle(device).getPropertyValue('margin-right'));
@@ -96,17 +95,12 @@
     // }
   });
 
-
-
-
   // крутилка
 
   const control = document.querySelector(".control__value");
   const controlThumb = document.querySelector('.control__thumb');
   const controlGrade = document.querySelector('.control__grade');
-
   let move = false;
-
 
   control.addEventListener('mousedown', function(e) {
 
@@ -121,10 +115,8 @@
   });
 
   document.addEventListener('mouseup', function(e) {
-
     move = false;
   });
-
 
   function rotatePointer(e) {
     const pointerBox = control.getBoundingClientRect();
@@ -182,8 +174,7 @@
     window.addEventListener('mousemove', rotatePointer);
     window.addEventListener('touchmove', rotatePointer);
 
-
-    // открытие фильтр-меню на ширине вьюпорта < 660px и фильтрация девайсов
+  // открытие фильтр-меню на ширине вьюпорта < 660px и фильтрация девайсов
 
   const filters = document.querySelectorAll('.filter-btn');
   const btnContainer = document.querySelector('.devices__wrapper');

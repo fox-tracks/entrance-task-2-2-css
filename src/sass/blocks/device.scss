@@ -50,7 +50,6 @@
 
   &__preset-wrapper {
     margin-bottom: 25px;
-    overflow-x: scroll;
   }
 
   &__control-wrapper {
@@ -93,12 +92,20 @@
       line-height: 14px;
     }
 
+
+    &__preset-wrapper {
+      margin-bottom: 25px;
+      overflow-x: scroll;
+    }
+
     &__control-wrapper_type_light,
     &__control-wrapper_type_heat {
       font-size: 0;
       width: 336px;
       transform: rotate(-90deg) translate(-137px, -20px);
     }
+
+
 
     &__control-wrapper_type_floor {
       margin-top: 83px;

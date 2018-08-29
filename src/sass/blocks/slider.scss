@@ -41,6 +41,8 @@
 @media (max-width: 500px) {
   .slider {
     &_main {
+      height: 120px;
+      overflow-y: hidden;
       width: 100%;
       max-width: 100%;
       overflow-x: hidden;

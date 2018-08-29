@@ -31,7 +31,20 @@
 
 @media (max-width: 760px) {
   .btn-slider-nav {
-    display: none;
+    &_type_single-arrow {
+      display: none;
+    }
+
   }
-;
 }
+
+@media (max-width: 500px) {
+  .btn-slider-nav {
+    &_type_double-arrow {
+      display: none;
+    }
+
+  }
+}
+
+
