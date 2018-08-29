@@ -9,23 +9,16 @@
   overflow: hidden;
 
   &__label {
+    line-height: 13px;
     margin-right: 10px;
     font: inherit;
     background-color: $btn-color;
     border-radius: 20px;
-    padding: 8px 15px;
+    padding: 8px 13px 6px 15px;
   }
-  //font: inherit;
-  //background-color: $btn-color;
-  //border-radius: 20px;
-  //padding: 8px 15px;
-  //
-  //&_state_active {
-  //  background-color: #FFD93E;
-  //}
 
   &:checked + &__label {
-    background-color: #FFD93E;
+    background-color: $yellow;
   }
 }
 
@@ -48,16 +41,5 @@
     &:checked + &__label {
       background-color: #FFFFFF;
     }
-
-    //&:not(:checked) + &__label {
-    //  position: absolute;
-    //  width: 1px;
-    //  height: 1px;
-    //  margin: -1px;
-    //  padding: 0;
-    //  border: 0;
-    //  clip: rect(0 0 0 0);
-    //  overflow: hidden;
-    //}
   }
 }

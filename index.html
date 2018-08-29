@@ -6,25 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Яндекс Дом</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <script>
-      // Picture element HTML5 shiv
-      document.createElement("picture");
-    </script>
   </head>
 
   <body class="page">
     <div class="page__wrapper">
-      <div style="display:none">
-        <include src="build/img/sprite.svg"></include>
-      </div>
       <header class="page__header header">
         <h1 class="visually-hidden">Приложение Яндекс Дом</h1>
         <div class="header__wrapper">
           <a class="header__logo logo">
             <picture>
-              <source>
-              <source>
-              <img class="logo__img" src="img/content-images/logo.svg" alt="Логотип Яндекс Дом" width="112.884" height="38.04">
+              <img class="logo__img" src="img/logo.svg" alt="Логотип Яндекс Дом" width="113" height="38">
             </picture>
           </a>
           <button class="header__hamburger-btn hamburger-btn">
@@ -96,7 +87,6 @@
             <h2 class="dashboard__section-title">Избранные сценарии</h2>
             <div class="scripts__slider slider">
               <div class="slider__nav-btn-wrapper">
-                <!-- нужно ли scripts__slider-btn ?  -->
                 <button class="slider__nav-btn btn-slider-nav btn-slider-nav_section_scenarios btn-slider-nav_type_single-arrow btn-slider-nav_direction_left"></button>
                 <button class="slider__nav-btn btn-slider-nav btn-slider-nav_section_scenarios btn-slider-nav_type_single-arrow btn-slider-nav_direction_right"></button>
               </div>
@@ -124,23 +114,6 @@
                     <span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>
                     <span class="btn__main-text">Сделать пол тёплым во всей квартире</span>
                   </div>
-                  <!--<button class="scenarios__item btn btn_scenario">-->
-                    <!--<span class="btn__icon btn__icon_type_time"></span>-->
-                    <!--<span class="btn__main-text">Я ухожу</span>-->
-                  <!--</button>-->
-                  <!--<button class="scenarios__item btn btn_scenario">-->
-                    <!--<span class="btn__icon btn__icon_type_time"></span>-->
-                    <!--<span class="btn__main-text">Я ухожу</span>-->
-                  <!--</button>-->
-                  <!--<button class="scenarios__item btn btn_scenario">-->
-                    <!--<span class="btn__icon btn__icon_type_time"></span>-->
-                    <!--<span class="btn__main-text">Я ухожу</span>-->
-                  <!--</button>-->
-                  <!--<button class="scenarios__item btn btn_scenario btn_state_active">-->
-                    <!--<span class="btn__icon btn__icon_type_heat btn__icon_state_active"></span>-->
-                    <!--<span class="btn__main-text">Сделать пол тёплым во всей квартире</span>-->
-                  <!--</button>-->
-
                 </div>
               </div>
             </div>
@@ -158,12 +131,12 @@
                   <span class="equipment__menu-toggle-text">Все</span>
                 </button>
               </div>
-              <form action="#" metod="get" class="equipment__filters-menu filters-menu">
+              <form action="#" method="get" class="equipment__filters-menu filters-menu">
                 <input type="radio" name="filters__item" value="all" data-html="Все" id="filter-btn_value_all" class="filters-menu__item filter-btn filter-btn_value_all filter-btn_state_active" checked>
                 <label for="filter-btn_value_all" class="filter-btn__label">Все</label>
                 <input type="radio" name="filters__item" value="kitchen" data-html="Кухня" id="filter-btn_value_kitchen" class="filters-menu__item filter-btn filter-btn_value_kitchen">
                 <label for="filter-btn_value_kitchen" class="filter-btn__label">Кухня</label>
-                <input type="radio" name="filters__item" value="room" data-html="Зал" id="filter-btn_value_room" class="filters-menu__item filter-btn filter-btn_value_room"">
+                <input type="radio" name="filters__item" value="room" data-html="Зал" id="filter-btn_value_room" class="filters-menu__item filter-btn filter-btn_value_room">
                 <label for="filter-btn_value_room" class="filter-btn__label">Зал</label>
                 <input type="radio" name="filters__item" value="lights" data-html="Лампочки" id="filter-btn_value_bulbs" class="filters-menu__item filter-btn filter-btn_value_bulbs">
                 <label for="filter-btn_value_bulbs" class="filter-btn__label">Лампочки</label>
@@ -250,108 +223,92 @@
         </div>
       </footer>
     </div>
-      <!-- попапы -->
-
+    <!-- попапы -->
+    <!-- попап температура -->
     <section class="page__popup popup popup_type_heat">
-      <div class="popup__wrapper"> <!-- выпилить не нужен -->
-        <form action="#" method="get" class="popup__content device">
-          <div class="popup__device-wrapper device__wrapper device__wrapper_type_heat">
-            <h2 class="device__name">Elgato Eve Degree Connected</h2>
-            <p class="device__state-text">Включено</p>
-            <p class="device__value">+23</p>
-            <div class="device__preset-wrapper presets">
-              <input type="radio" name="presets__item" value="manual" id="presets_value_by_hand" class="presets__item" checked>
-              <label for="presets_value_by_hand" class="presets__label">Все</label>
-              <input type="radio" name="presets__item" value="cold" id="presets_value_cold" class="presets__item">
-              <label for="presets_value_cold" class="presets__label">Холодно</label>
-              <input type="radio" name="presets__item" value="warm" id="presets_value_warm" class="presets__item">
-              <label for="presets_value_warm" class="presets__label">Тепло</label>
-              <input type="radio" name="presets__item" value="hot" id="presets_value_hot" class="presets__item">
-              <label for="presets_value_hot" class="presets__label">Жарко</label>
-            </div>
-            <div class="device__control-wrapper device__control-wrapper_type_heat">
-              <input type="range" min="-10" max="30" step="1" value="16" id="control_type_heat" class="device__control control control_type_heat">
-              <label for="control_type_heat" class="control__label control__label_min">-10</label>
-              <label for="control_type_heat" class="control__label control__label_max">+30</label>
-            </div>
+      <form action="#" method="get" class="popup__content device">
+        <div class="popup__device-wrapper device__wrapper device__wrapper_type_heat">
+          <h2 class="device__name">Elgato Eve Degree Connected</h2>
+          <p class="device__state-text">Включено</p>
+          <p class="device__value">+23</p>
+          <div class="device__preset-wrapper presets">
+            <input type="radio" name="presets__item" value="manual" id="presets_value_by_hand" class="presets__item" checked>
+            <label for="presets_value_by_hand" class="presets__label">Вручную</label>
+            <input type="radio" name="presets__item" value="cold" id="presets_value_cold" class="presets__item">
+            <label for="presets_value_cold" class="presets__label">Холодно</label>
+            <input type="radio" name="presets__item" value="warm" id="presets_value_warm" class="presets__item">
+            <label for="presets_value_warm" class="presets__label">Тепло</label>
+            <input type="radio" name="presets__item" value="hot" id="presets_value_hot" class="presets__item">
+            <label for="presets_value_hot" class="presets__label">Жарко</label>
           </div>
-          <button class="popup__btn popup__btn_type_apply" type="submit">Применить</button>
-          <button class="popup__btn popup__btn_type_close" type="button">Закрыть</button>
-        </form>
-      </div>
+          <div class="device__control-wrapper device__control-wrapper_type_heat">
+            <input type="range" min="-10" max="30" step="1" value="16" id="control_type_heat" class="device__control control control_type_heat">
+            <label for="control_type_heat" class="control__label control__label_min">-10</label>
+            <label for="control_type_heat" class="control__label control__label_max">+30</label>
+          </div>
+        </div>
+        <button class="popup__btn popup__btn_type_apply" type="submit">Применить</button>
+        <button class="popup__btn popup__btn_type_close" type="button">Закрыть</button>
+      </form>
     </section>
+    <!-- попап свет -->
     <section class="page__popup popup popup_type_light">
-      <div class="popup__wrapper">
-        <form action="#" method="get"  class="popup__content device">
-          <div class="popup__device-wrapper device__wrapper device__wrapper_type_light">
-            <h2 class="device__name">Xiaomi Yeelight LED Smart Bulb</h2>
-            <p class="device__state-text">Включится в <span class="device__time-text">17:00</span></p>
-            <div class="device__preset-wrapper presets">
-              <input type="radio" name="presets__item" value="manual" id="presets_value_manual" class="presets__item" checked>
-              <label for="presets_value_manual" class="presets__label">Все</label>
-              <input type="radio" name="presets__item" value="day-light" id="presets_value_day-light" class="presets__item">
-              <label for="presets_value_day-light" class="presets__label">Дневной свет</label>
-              <input type="radio" name="presets__item" value="evening-light" id="presets_value_evening-light" class="presets__item">
-              <label for="presets_value_evening-light" class="presets__label">Вечерний свет</label>
-              <input type="radio" name="presets__item" value="dawn" id="presets_value_dawn" class="presets__item ">
-              <label for="presets_value_dawn" class="presets__label">Рассвет</label>
-            </div>
-            <div class="device__control-wrapper device__control-wrapper_type_light">
-              <input type="range" min="1" max="52" step="1" value="35" class="device__control control control_type_light">
-            </div>
-
-            <!--<div class="device__control-wrapper">-->
-              <!--<input type="range" min="1" max="52" step="1" value="35" id="control_type_light" class="device__control control control_type_light">-->
-              <!--<label for="control_type_light" class="control__label control__label_min">-10</label>-->
-              <!--<label for="control_type_light" class="control__label control__label_max">+30</label>-->
-            <!--</div>-->
+      <form action="#" method="get"  class="popup__content device">
+        <div class="popup__device-wrapper device__wrapper device__wrapper_type_light">
+          <h2 class="device__name">Xiaomi Yeelight LED Smart Bulb</h2>
+          <p class="device__state-text">Включится в <span class="device__time-text">17:00</span></p>
+          <div class="device__preset-wrapper presets">
+            <input type="radio" name="presets__item" value="manual" id="presets_value_manual" class="presets__item" checked>
+            <label for="presets_value_manual" class="presets__label">Вручную</label>
+            <input type="radio" name="presets__item" value="day-light" id="presets_value_day-light" class="presets__item">
+            <label for="presets_value_day-light" class="presets__label">Дневной свет</label>
+            <input type="radio" name="presets__item" value="evening-light" id="presets_value_evening-light" class="presets__item">
+            <label for="presets_value_evening-light" class="presets__label">Вечерний свет</label>
+            <input type="radio" name="presets__item" value="dawn" id="presets_value_dawn" class="presets__item ">
+            <label for="presets_value_dawn" class="presets__label">Рассвет</label>
           </div>
-          <button class="popup__btn popup__btn_type_apply" type="submit">Применить</button>
-          <button class="popup__btn popup__btn_type_close" type="button">Закрыть</button>
-        </form>
-      </div>
+          <div class="device__control-wrapper device__control-wrapper_type_light">
+            <input type="range" min="1" max="53" step="1" value="35" class="device__control control control_type_light">
+          </div>
+        </div>
+        <button class="popup__btn popup__btn_type_apply" type="submit">Применить</button>
+        <button class="popup__btn popup__btn_type_close" type="button">Закрыть</button>
+      </form>
     </section>
+    <!-- попап теплый пол -->
     <section class="page__popup popup popup_type_floor">
-      <div class="popup__wrapper">
-        <form action="#" method="get"  class="popup__content device">
-          <div class="popup__device-wrapper device__wrapper device__wrapper_type_floor">
-            <h2 class="device__name">Xiaomi Warm Floor</h2>
-            <p class="device__state-text">Включено</p>
-            <p class="device__value">+23</p>
-            <!-- <p class="device__icon">термометр</p>  ???? или фоном-->
-            <div class="device__control-wrapper device__control-wrapper_type_floor">
-              <svg class="device__control control control_type_floor" width="221px" height="221px" viewBox="0 0 221 221">
-                <radialGradient id="grad-grey"
-                                x1="0%" y1="0%"
-                                x2="0%" y2="99%">
-                  <stop offset="0%" stop-color="grey" />
-                  <stop offset="99%" stop-color="grey" />
-                  <stop offset="99%" stop-color="white" />
+      <form action="#" method="get"  class="popup__content device">
+        <div class="popup__device-wrapper device__wrapper device__wrapper_type_floor">
+          <h2 class="device__name">Xiaomi Warm Floor</h2>
+          <p class="device__state-text">Включено</p>
+          <p class="device__value">+23</p>
+          <div class="device__control-wrapper device__control-wrapper_type_floor">
+            <svg class="device__control control control_type_floor" width="221px" height="221px" viewBox="0 0 221 221">
+              <radialGradient id="grad-grey">
+                <stop offset="0%" stop-color="grey" />
+                <stop offset="99%" stop-color="grey" />
+                <stop offset="99%" stop-color="white" />
 
-                </radialGradient>
-                <radialGradient id="grad-orange"
-                                x1="0%" y1="0%"
-                                x2="0%" y2="99%">
-                  <stop offset="0%" stop-color="orange" />
-                  <stop offset="99%" stop-color="orange" />
-                  <stop offset="99%" stop-color="white" />
+              </radialGradient>
+              <radialGradient id="grad-orange">
+                <stop offset="0%" stop-color="orange" />
+                <stop offset="99%" stop-color="orange" />
+                <stop offset="99%" stop-color="white" />
 
-                </radialGradient>
-                <circle r="111" cx="111" cy="111" class="control__grade" fill="url(#grad-grey)" stroke="url(#grad-orange)"/>
-                <circle class="control__dash-mask" r="90" cx="111" cy="111" fill="white" stroke="white" stroke-width="50px" stroke-dasharray="3 1"/>
-                <circle class="control__gap-mask" r="111" cx="111" cy="111" fill="none" stroke="white" stroke-width="45px" stroke-dasharray="0 580 120"/>
-              </svg>
-              <div class="control__thumb"></div>
-              <p class="control__value"><span>+23</span></p>
-            </div>
+              </radialGradient>
+              <circle r="111" cx="111" cy="111" class="control__grade" fill="url(#grad-grey)" stroke="url(#grad-orange)"/>
+              <circle class="control__dash-mask" r="90" cx="111" cy="111" fill="white" stroke="white" stroke-width="50px" stroke-dasharray="3 1"/>
+              <circle class="control__gap-mask" r="111" cx="111" cy="111" fill="none" stroke="white" stroke-width="45px" stroke-dasharray="0 580 120"/>
+            </svg>
+            <div class="control__thumb"></div>
+            <p class="control__value"><span>+23</span></p>
           </div>
-          <button class="popup__btn popup__btn_type_apply" type="submit">Применить</button>
-          <button class="popup__btn popup__btn_type_close" type="button">Закрыть</button>
-        </form>
-      </div>
+        </div>
+        <button class="popup__btn popup__btn_type_apply" type="submit">Применить</button>
+        <button class="popup__btn popup__btn_type_close" type="button">Закрыть</button>
+      </form>
     </section>
-    <script src="js/main.js"></script>
-
+    <script src="js/main.min.js"></script>
   </body>
 
 </html>

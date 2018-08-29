@@ -13,15 +13,16 @@
   }
 
   &__label {
-    font: inherit;
+    font-size: 13px;
+    line-height: 15px;
     background-color: $btn-color;
     border-radius: 20px;
-    padding: 8px 15px;
+    padding: 5px 13px 9px 14px;
     margin-right: 10px;
     white-space: nowrap;
   }
 
   &__item:checked + &__label {
-    background-color: #FFD93E;
+    background-color: $yellow;
   }
 }

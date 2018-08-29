@@ -1,4 +1,5 @@
 .temperature-table {
+  margin-left: -3px;
   &__headings {
     color: $grey;
   }
@@ -10,7 +11,7 @@
   }
 
   &__cell {
-    padding-right: 18px;
+    padding-right: 15px;
   }
 
   &__cell-with-icon {

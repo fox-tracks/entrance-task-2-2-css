@@ -12,6 +12,10 @@
     border-radius: 20px;
     background: url("../img/bg@1x.png") no-repeat;
     background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg@2x.png");
+    }
   }
 
   &__info-block {
@@ -24,17 +28,20 @@
     font-size: 27px;
     line-height: 31px;
     font-weight: bold ;
+    margin-top: 3px;
   }
 
   &__info {
-    margin: 6px 0 25px;
+    margin: 6px 0 23px;
   }
 }
 
 @media (max-width: 500px) {
   .main {
+    max-width: 100%;
+    width: 100%;
+    min-width: 335px;
 
-    min-width: 400px;
     &__wrapper {
       flex-direction: column;
       padding: 20px 0 20px 20px;

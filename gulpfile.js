@@ -1,23 +1,20 @@
 "use strict";
 
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var plumber = require("gulp-plumber");
-var postcss = require("gulp-postcss");
-var posthtml = require("gulp-posthtml");
-var htmlmin = require("gulp-htmlmin");
-var include = require("posthtml-include");
-var autoprefixer = require("autoprefixer");
-var minify = require("gulp-csso");
-var imagemin = require("gulp-imagemin");
-var webp = require("gulp-webp");
-var svgstore = require("gulp-svgstore");
-var rename = require("gulp-rename");
-var server = require("browser-sync").create();
-var run = require("run-sequence");
-var del = require("del");
-var concat = require("gulp-concat");
-var uglify = require('gulp-uglify-es').default;
+const gulp = require("gulp");
+const sass = require("gulp-sass");
+const plumber = require("gulp-plumber");
+const postcss = require("gulp-postcss");
+const htmlmin = require("gulp-htmlmin");
+const autoprefixer = require("autoprefixer");
+const minify = require("gulp-csso");
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const rename = require("gulp-rename");
+const server = require("browser-sync").create();
+const run = require("run-sequence");
+const del = require("del");
+const concat = require("gulp-concat");
+const uglify = require('gulp-uglify-es').default;
 
 gulp.task("style", function () {
   gulp.src("src/sass/styles.scss")
@@ -33,16 +30,6 @@ gulp.task("style", function () {
     .pipe(server.stream());
 });
 
-gulp.task("sprite", function () {
-  return gulp.src("src/img/for_sprite/*.svg")
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("dist/img"));
-
-});
-
 gulp.task("html", function () {
   return gulp.src("*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
@@ -50,11 +37,11 @@ gulp.task("html", function () {
 });
 
 gulp.task("scripts", function () {
-  return gulp.src("src/js/own/**/*.js")
+  return gulp.src("src/js/**/*.js")
     .pipe(concat("main.js"))
     .pipe(gulp.dest("dist/js"))
     .pipe(uglify())
-    .pipe(rename("common.min.js"))
+    .pipe(rename("main.min.js"))
     .pipe(gulp.dest("dist/js"));
 });
 
@@ -69,9 +56,9 @@ gulp.task("images", function () {
 });
 
 gulp.task("webp", function () {
-  return gulp.src("src/img/content-images/**/*.{png,jpg}")
+  return gulp.src("src/img/**/*.{png,jpg}")
     .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("dist/img/content-images"));
+    .pipe(gulp.dest("dist/img"));
 });
 
 gulp.task("serve", function () {
@@ -84,15 +71,6 @@ gulp.task("serve", function () {
 });
 
 
-gulp.task("copy", function () {
-  return gulp.src([
-    "src/js/vendor/**/*.js",
-  ], {
-    base: "./src/js/vendor/"
-  })
-    .pipe(gulp.dest("dist/js"));
-});
-
 gulp.task("clean", function () {
   return del("dist");
 });
@@ -100,9 +78,7 @@ gulp.task("clean", function () {
 gulp.task("build", function (done) {
   run(
     "clean",
-    "copy",
     "style",
-    "sprite",
     "html",
     "scripts",
     done);
