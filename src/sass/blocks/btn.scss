@@ -13,13 +13,9 @@
 
   &_scenario {
     height: 100px;
-    //max-width: 228px;
   }
 
   &_device {
-    //min-width: 150px;
-    //max-width: 200px;
-    //width: 100%;
     flex-shrink: 0;
   }
 
@@ -75,11 +71,7 @@
     &_type_time {
       background-image: url("../img/icon_scheduled.svg");
     }
-
   }
-
-
-
 }
 
 @media (max-width: 965px) {
@@ -89,10 +81,6 @@
       max-width: 200px;
       width: 100%;
     }
-
-    //&_scenario {
-    //  margin-bottom: 15px;
-    //}
   }
 }
 

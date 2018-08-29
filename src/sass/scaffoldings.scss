@@ -25,7 +25,7 @@ a {
 
 button {
   @include indent(0, 0);
-  border: none; //убрать
+  border: none;
   background-color: transparent;
   outline: none;
   cursor: pointer;
