@@ -21,7 +21,11 @@ gulp.task('style', function () {
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(
+        {
+          grid: true
+        }
+      )
     ]))
     .pipe(gulp.dest('dist/css'))
     .pipe(minify())
