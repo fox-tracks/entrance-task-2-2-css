@@ -1,6 +1,7 @@
 .main-devices {
   height: 310px;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   width: 221px;
 

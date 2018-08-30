@@ -93,6 +93,7 @@
     &__preset-wrapper {
       margin-bottom: 25px;
       overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
     }
 
     &__control-wrapper_type_light,
