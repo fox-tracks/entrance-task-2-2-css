@@ -40,6 +40,7 @@
 @media (max-width: 760px) {
 
   .dashboard {
+    margin-top: 92px;
     &__wrapper {
       flex-direction: column;
     }
@@ -64,5 +65,12 @@
   }
 
 }
+
+@media (max-width: 500px) {
+  .dashboard {
+    margin-top: 64px;
+  }
+}
+
 
 

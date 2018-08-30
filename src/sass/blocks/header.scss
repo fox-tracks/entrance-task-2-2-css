@@ -2,6 +2,8 @@
   border-bottom: 1px solid #F0F0F0;
   padding: 0;
   height: 92px;
+  position: relative;
+  z-index: 10;
 
   &__logo {
     padding: 25px 0;
@@ -23,12 +25,18 @@
 @media (max-width: 760px) {
   .header {
     border: none;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 5px;
   }
 }
 
 @media (max-width: 500px) {
   .header {
     height: 64px;
+
 
     &__wrapper {
       display: flex;
