@@ -12,6 +12,7 @@ html {
 *::before {
   box-sizing: inherit;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 img {

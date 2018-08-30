@@ -15,6 +15,7 @@
     background-color: $btn-color;
     border-radius: 20px;
     padding: 8px 13px 6px 15px;
+    cursor: pointer;
   }
 
   &:checked + &__label {
