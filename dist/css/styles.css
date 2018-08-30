@@ -450,7 +450,9 @@ input::-moz-focus-inner {
     margin: 0 auto; }
     .page__wrapper_state_blur {
       -webkit-filter: blur(3px);
-              filter: blur(3px); }
+              filter: blur(3px);
+      overflow: hidden;
+      position: fixed; }
 
 .visually-hidden {
   position: absolute;

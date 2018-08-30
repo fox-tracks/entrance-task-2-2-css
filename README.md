@@ -29,3 +29,7 @@
 `npm i`
 
 `npm start`
+
+----------------
+
+Публикация на [GitHub pages](https://fox-tracks.github.io/entrance-task-2-2-css/dist/).

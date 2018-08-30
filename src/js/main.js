@@ -251,12 +251,10 @@
 
   function blurPage() {
     page.classList.add('page__wrapper_state_blur');
-    document.body.style.overflow = 'hidden';
   }
 
   function unblurPage() {
     page.classList.remove('page__wrapper_state_blur');
-    document.body.style.overflow = 'auto';
   }
 
   function openPopup(btn, popup, content) {
