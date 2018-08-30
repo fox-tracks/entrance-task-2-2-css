@@ -25,6 +25,7 @@ a {
 
 button {
   @include indent(0, 0);
+
   border: none;
   background-color: transparent;
   outline: none;

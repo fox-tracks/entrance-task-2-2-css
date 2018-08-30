@@ -1,6 +1,7 @@
 .info-nav {
   &__list {
     @include no-list();
+
     display: flex;
     align-content: center;
   }
@@ -15,7 +16,6 @@
     line-height: 64px;
     white-space: nowrap;
   }
-
 }
 
 @media (max-width: 670px) {
@@ -41,5 +41,3 @@
     }
   }
 }
-
-

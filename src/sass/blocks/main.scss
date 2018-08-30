@@ -1,5 +1,4 @@
 .main {
-
   min-width: 446px;
 
   &__wrapper {
@@ -25,9 +24,10 @@
 
   &__greeting {
     @include indent(0, 0);
+
     font-size: 27px;
     line-height: 31px;
-    font-weight: bold ;
+    font-weight: bold;
     margin-top: 3px;
   }
 
@@ -47,7 +47,6 @@
       padding: 20px 0 20px 20px;
       min-width: 335px;
       height: 282px;
-
     }
 
     &__greeting {
@@ -66,5 +65,3 @@
     }
   }
 }
-
-

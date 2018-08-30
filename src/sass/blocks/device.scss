@@ -7,7 +7,7 @@
     width: 100%;
     margin-bottom: 20px;
     padding: 25px;
-    background-color: #FFF;
+    background-color: #fff;
     background-image: url("../img/icon_temperature_2.svg");
     background-repeat: no-repeat;
     background-position: top 25px right 25px;
@@ -23,8 +23,6 @@
     &_type_light {
       background-image: url("../img/icon_sun.svg");
     }
-
-
   }
 
   &__name {
@@ -40,6 +38,7 @@
 
   &__value {
     @include indent(0, 0);
+
     font-size: 36px;
     line-height: 42px;
     position: absolute;
@@ -63,8 +62,6 @@
       margin: 0 auto;
     }
   }
-
-
 }
 
 @media (max-width: 680px) {
@@ -112,6 +109,5 @@
     &__value {
       display: none;
     }
-
   }
 }

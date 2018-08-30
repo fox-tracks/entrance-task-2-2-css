@@ -11,7 +11,7 @@
   &__label {
     line-height: 13px;
     margin-right: 10px;
-    font: inherit;
+    font-size: inherit;
     background-color: $btn-color;
     border-radius: 20px;
     padding: 8px 13px 6px 15px;
@@ -30,7 +30,7 @@
       width: 100%;
       display: block;
       font-weight: normal;
-      background-color: #FFFFFF;
+      background-color: #fff;
       border-radius: 0;
 
       &:active {
@@ -39,7 +39,7 @@
     }
 
     &:checked + &__label {
-      background-color: #FFFFFF;
+      background-color: #fff;
     }
   }
 }

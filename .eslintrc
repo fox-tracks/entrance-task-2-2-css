@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "indent": ["error", 4],
+    "quotes": ["error", "single"],
+    "no-undef": "error"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
+  }
+}

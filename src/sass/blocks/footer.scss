@@ -8,6 +8,7 @@
 
   &__wrapper {
     @include wrapper();
+
     height: 64px;
     display: flex;
     align-items: center;
@@ -32,7 +33,6 @@
 @media (max-width: 440px) {
   .footer {
     font-size: 11px;
-
   }
 }
 

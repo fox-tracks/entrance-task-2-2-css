@@ -1,17 +1,17 @@
 .equipment {
   &__wrapper {
     @include wrapper();
+
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
     margin-top: 3px;
     margin-bottom: 5px;
   }
+
   &__menu-toggle {
     display: none;
   }
-
-
 }
 
 @media (min-width: 1367px) {
@@ -57,6 +57,7 @@
       &:focus {
         outline: none;
       }
+
       &:active {
         box-shadow: 0 2px 6px 0 rgba(146, 141, 141, 0.5);
       }

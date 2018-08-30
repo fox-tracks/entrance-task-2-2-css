@@ -17,7 +17,7 @@
     opacity: 0.3;
   }
 
-  &_direction_right{
+  &_direction_right {
     margin-left: 15px;
     transform: scale(-1, 1);
   }
@@ -25,16 +25,13 @@
   &_state_active {
     opacity: 1;
   }
-
 }
-
 
 @media (max-width: 760px) {
   .btn-slider-nav {
     &_type_single-arrow {
       display: none;
     }
-
   }
 }
 
@@ -43,8 +40,5 @@
     &_type_double-arrow {
       display: none;
     }
-
   }
 }
-
-

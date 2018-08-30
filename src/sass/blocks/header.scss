@@ -1,5 +1,5 @@
 .header {
-  border-bottom: 1px solid #F0F0F0;
+  border-bottom: 1px solid #f0f0f0;
   padding: 0;
   height: 92px;
   position: relative;
@@ -11,6 +11,7 @@
 
   &__wrapper {
     @include wrapper();
+
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -37,18 +38,14 @@
   .header {
     height: 64px;
 
-
     &__wrapper {
       display: flex;
       justify-content: space-between;
-
     }
 
     &__hamburger-btn {
       display: block;
-
     }
-
 
     &__nav {
       position: absolute;

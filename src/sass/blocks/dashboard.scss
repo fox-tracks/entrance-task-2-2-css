@@ -1,6 +1,7 @@
 .dashboard {
   &__wrapper {
     @include wrapper();
+
     display: flex;
     justify-content: space-between;
   }
@@ -27,7 +28,6 @@
 @media (max-width: 965px) {
   .dashboard {
     &__section {
-
       &_subsection_scripts {
         min-width: 255px;
         width: 45vw;
@@ -38,9 +38,9 @@
 }
 
 @media (max-width: 760px) {
-
   .dashboard {
     margin-top: 92px;
+
     &__wrapper {
       flex-direction: column;
     }
@@ -63,7 +63,6 @@
       }
     }
   }
-
 }
 
 @media (max-width: 500px) {
@@ -71,6 +70,3 @@
     margin-top: 64px;
   }
 }
-
-
-
